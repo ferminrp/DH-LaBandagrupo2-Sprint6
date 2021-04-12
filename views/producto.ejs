@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head') %>
+
+<link rel="stylesheet" href="styles/producto.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <div class="logo"></div>
+            <h3>WaveRunners</h3>
+        </div>
+        <input type="text" name="search" id="search" placeholder="Busca productos">
+        <div class="header-right">
+            <ul>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/register">Registrarse</a></li>
+            </ul>
+            <div class="avatar"></div>
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+
+    <main>
+        <section class="product">
+            <article class="product-images">
+                <div class="images-second">
+                    <img src="./images/producto/producto-kite07.jpg">
+                    <img src="./images/producto/producto-kite06.jpg">
+                    <img src="./images/producto/producto-kite05.jpg">
+                </div>
+                <div class="images-first">
+                    <img src="./images/producto/producto-kite.jpg">
+                </div>
+            </article>
+            <article class="product-detalle">
+                <h3 class="product-name">KITE NORTH VEGAS 2018</h3>
+                <h2 class="product-price">$99.999</h2>
+                <br>
+                <h4 class="product-form-title">DETALLE</h4>
+                <form action="#" method="POST" class="product-form">
+                    <label>COLOR</label>
+                    <select name="color">
+                        <option value="color01">01</option>
+                        <option value="color02">02</option>
+                        <option value="color03">03</option>
+                    </select>
+                    <label>MEDIDA</label>
+                    <select name="medida">
+                        <option value="medida01">01</option>
+                        <option value="medida02">02</option>
+                        <option value="medida03">03</option>
+                    </select>
+                    <label>CANTIDAD</label>
+                    <select name="cantidad">
+                        <option value="cantidad01">01</option>
+                        <option value="cantidad02">02</option>
+                        <option value="cantidad03">03</option>
+                    </select>
+                    <div class="product-buttons">
+                        <button type="submit">COMPRAR AHORA</button>
+                        <button type="submit">AGREGAR AL CARRITO</button>
+                    </div>
+                </form>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="product-icons">
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                    <h4 class="product-info-title">DESCRIPCION</h4>
+                    <p class="product-info">
+                        ipsum dolor sit, amet consectetur adipisicing elit. Rem reiciendis necessitatibus iusto sequi, assumenda, totam commodi exercitationem, quasi debitis quae tempore quo odio libero id molestiae est veniam neque voluptatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum nobis eos quaerat aut, rem omnis. Numquam vero eaque rerum? Maxime nulla illo ullam sunt, optio ad laborum ipsum quia est?
+                    </p>
+            </article>
+        </section>
+        <section>
+            <h4 class="product-related-title">PRODUCTOS RELACIONADOS</h4>
+            <article class="product-related">
+                <div class="product-related-son">
+                    <img src="./images/producto/producto-kite04.jpg">
+                    <p class="related-name">Lorem ipsum</p>
+                    <div class="related-price">$99.999</div>
+                </div>
+                <div class="product-related-son">
+                    <img src="./images/producto/producto-kite03.png">
+                    <p class="related-name">Lorem ipsum</p>
+                    <div class="related-price">$99.999</div>
+                </div>
+                <div class="product-related-son">
+                    <img src="./images/producto/producto-kite02.png">
+                    <p class="related-name">Lorem ipsum</p>
+                    <div class="related-price">$99.999</div>
+                </div>
+            </article>
+        </section>
+    </main>
+
+
+    <%- include('partials/footer') %>
+    
+</body>
+</html>

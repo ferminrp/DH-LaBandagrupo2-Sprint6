@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('partials/head') %>
+    <link rel="stylesheet" href="styles/carrito.css">
+</head>
+
+<header>
+    <div class="header-left">
+        <div class="logo"></div>
+        <h3>WaveRunners</h3>
+    </div>
+    <input type="text" name="search" id="search" placeholder="Busca productos">
+    <div class="header-right">
+        <i href='#' class="fas fa-shopping-cart"></i>
+        <div class="avatar"></div>
+    </div>
+</header>
+
+<body>
+    <section class="barra de navegacion">
+        <ul class="main-navbar">
+            <li><a a href="#">Surf</a></li>
+            <li><a a href="#">Kite</a></li>
+            <li><a a href="#">PaddleSurf</a></li>
+            <li><a a href="#">Wakeboard</a></li>
+            <li><a a href="#">Snorkel</a></li>
+            <li><a a href="#">Windsurf</a></li>
+
+
+        </ul>
+    </section>
+
+    <section class="portada">
+        <img class="volandoalto" src='/images/carrito/volandoalto.png'>
+    </section>
+
+    <main>
+        <table style= "width:100%">
+        <h3 class="titulocart"> Productos del carrito</h3>
+
+        <div class="sub-titulos-container">
+
+            <tr class="sub-titulos-carrito">
+                <th class="sub-tit-eliminar">Eliminar</th>
+                <th>Productos</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+                <th>Sub Total</th>
+
+            </tr>
+        </div>
+        <section class="producto1">
+            <tr class="detalle-productos">
+                <td><a a href="#"><i class="far fa-times-circle"></i></a></td>
+                <td class="contenido-producto"><img class="foto-producto" src="/images/carrito/KiteDuotone.jpeg">Dice 9M
+                </td>
+                <td>$172.470</td>
+                <td><input class="cantidad" type="number" name="qprod" id="qprod" placeholder="Cant."></td>
+                <td>$172.470</td>
+            </tr>
+        </section>
+        <section class="producto2">
+            <tr class="detalle-productos">
+                <th><a a href="#"><i class="far fa-times-circle"></i></a></th>
+                <th class="contenido-producto"><img class="foto-producto" src="/images/carrito/barrakite.jpeg">Barra
+                    44cm</th>
+                <th>$43.200</th>
+                <th><input class="cantidad" type="number" name="qprod" id="qprod" placeholder="Cant."></th>
+                <th>$43.200</th>
+                </tr>
+        </section>
+        <section class="producto3">
+            <ul class="detalle-productos">
+                <li><a a href="#"><i class="far fa-times-circle"></i></a></li>
+                <li class="contenido-producto"><img class="foto-producto" src="/images/carrito/inflador.jpeg">Inflador</li>
+                <li>$5.400</li>
+                <li><input class="cantidad" type="number" name="qprod" id="qprod" placeholder="Cant."></li>
+                <li>$5.400</li>
+            </table>
+            </ul>
+        </section>
+        <br>
+        <p class="divisor"></p>
+        <br>
+        <br>
+        <section class="container-botones">
+
+            <input class="botones-de-accion" type="submit" value="Seguir Comprando">
+
+            <input class="botones-de-accion" type="submit" value="Guardar Carrito">
+
+            
+
+        </section>
+
+        <p class="total-compra">Total $221.070 </p>
+
+        <section class="container-seguircomprando">
+            <input class="botones-de-accion2" type="submit" value="Continuar Compra">
+        </section>
+
+    </main>
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <ul>
+                    <li><a href="">Preguntas Frecuentes</a></li>
+                    <li><a href="">Contactanos</a></li>
+                </ul>
+            </div>
+            <div class="footer-right">
+                <a href=""><i class="fab fa-twitter"></i></a>
+                <a href=""><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,172 @@
+header {
+    box-shadow: 0px 0px;
+}
+
+
+.main-navbar{
+    display: flex;
+    list-style: none;
+    padding: 0px;
+    text-decoration: none;
+    text-align: center;
+    justify-content: space-between;
+    margin : 10px 30px;
+}
+.volandoalto {
+   width: 100%;
+}
+
+main {
+    max-width: 90%;
+    margin: auto;
+}
+
+.titulocart {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+}
+.sub-titulos-container{
+   width: 98%;
+   
+    
+}
+.sub-titulos-carrito{
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sub-tit-eliminar{
+    margin-left:0px;
+}
+
+.producto{
+    width: 100%;
+    border-top: black;
+    border-style: solid;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    border-width: 1px;
+}
+
+.detalle-productos{
+
+    display: flex;
+    list-style: none;
+    padding: 0px;
+    text-decoration: none;
+    justify-content:space-between;
+}
+
+.contenido-producto {
+    width: 150px;
+    
+    
+}
+.foto-producto{
+    width: 50px;
+    margin-right: 0px;
+    align-items: center;
+    
+   
+}
+
+.cantidad{
+    width: 40px;
+}
+.divisor {
+    width: 90%;
+    margin:auto;
+    border-top: black;
+    border-style: solid;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    border-width: 1px;
+}
+
+.container-botones {
+    display: flex;
+    justify-content:space-evenly;
+    height: 30px;
+    margin-right: 30%;
+}
+
+.container-botones button, .container-seguircomprando button {
+    max-width: 200px;
+}
+
+.container-botones button {
+    margin: 10px;
+}
+
+.container-seguircomprando {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.total-compra{
+    margin-left: 70%;
+}
+
+
+
+
+@media screen and (max-width: 600px){
+     .avatar, .main-navbar {
+        display:none;
+    }
+    .total-compra {
+        margin-left: 10px;
+        margin-top: 50px;
+        font-weight: bold;
+    }
+
+    .container-botones {
+        margin-right: 0%;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .header-left {
+        display:none;
+    }
+    .container-seguircomprando button {
+        max-width: 100%;
+    }
+}
+
+@media screen and (min-width: 601px){
+    .fa-bars {
+        display: none;
+    }
+}
+
+/* footer */
+
+footer {
+    background-color: var(--footer-gray);
+    padding: 30px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-left ul {
+    list-style-type:none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.footer-right a {
+    margin-left: 10px;
+}
