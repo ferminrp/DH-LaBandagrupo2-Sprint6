@@ -19,14 +19,6 @@ app.use(express.json());
 
 app.use('/', indexRoutes); // Rutas de la home pasan a controlarlas indexRoutes
 
-app.get('/login', (req, res) => {
-    res.render('users/login');
-});
-
-app.get('/register', (req, res) => {
-    res.render('users/register');
-});
-
 app.get('/producto', (req, res) => {
     res.render('productos/producto');
 });
