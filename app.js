@@ -15,10 +15,7 @@ const methodOverride = require('method-override'); // Requerimos este módulo pa
 app.use(methodOverride('_method'))
 app.use(express.json());
 
-// Renderizo la pagina 404 si no identifica la ruta
-app.use((req, res, next) => {
-    res.status(404).render("not-found");
-});
+
 
 app.use('/', indexRoutes); // Rutas de la home pasan a controlarlas indexRoutes
 
@@ -36,6 +33,11 @@ app.get('/producto', (req, res) => {
 
 app.get('/carrito', (req, res) => {
     res.render('productos/carrito');
+});
+
+// Renderizo la pagina 404 si no identifica la ruta
+app.use((req, res, next) => {
+    res.status(404).render("not-found");
 });
 
 
