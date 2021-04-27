@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('partials/head') %>
+<%- include('../partials/head') %>
     <title>Wave Runners</title>
 
     <link rel="stylesheet" href="styles/carrito.css">
@@ -45,7 +45,7 @@
                     <tr class="sub-titulos-carrito">
                         <th class="sub-tit-eliminar">Eliminar</th>
                         <th>Productos</th>
-                        <th>Precio</th>
+                        <th class='precio'>Precio</th>
                         <th>Cantidad</th>
                         <th>Sub Total</th>
 
@@ -57,35 +57,37 @@
                         <td class="contenido-producto"><img class="foto-producto"
                                 src="/images/carrito/KiteDuotone.jpeg">Dice 9M
                         </td>
-                        <td>$172.470</td>
+                        <td class= "precio">$172.470</td>
                         <td><input class="cantidad" type="number" name="qprod" id="qprod" placeholder="Cant."></td>
                         <td>$172.470</td>
                     </tr>
                 </section>
                 <section class="producto2">
                     <tr class="detalle-productos">
-                        <th><a a href="#"><i class="far fa-times-circle"></i></a></th>
-                        <th class="contenido-producto"><img class="foto-producto"
+                        <td><a a href="#"><i class="far fa-times-circle"></i></a></td>
+                        <td class="contenido-producto"><img class="foto-producto"
                                 src="/images/carrito/barrakite.jpeg">Barra
-                            44cm</th>
-                        <th>$43.200</th>
-                        <th><input class="cantidad" type="number" name="qprod" id="qprod" placeholder="Cant."></th>
-                        <th>$43.200</th>
+                            44cm</td>
+                        <td class= "precio" >$43.200</td>
+                        <td><input class="cantidad" type="number" name="qprod" id="qprod" placeholder="Cant."></td>
+                        <td>$43.200</td>
                     </tr>
                 </section>
                 <section class="producto3">
-                    <ul class="detalle-productos">
-                        <li><a a href="#"><i class="far fa-times-circle"></i></a></li>
-                        <li class="contenido-producto"><img class="foto-producto"
-                                src="/images/carrito/inflador.jpeg">Inflador</li>
-                        <li>$5.400</li>
-                        <li><input class="cantidad" type="number" name="qprod" id="qprod" placeholder="Cant."></li>
-                        <li>$5.400</li>
+                    <tr class="detalle-productos">
+                        <td><a a href="#"><i class="far fa-times-circle"></i></a></td>
+                        <td class="contenido-producto"><img class="foto-producto"
+                                src="/images/carrito/inflador.jpeg">Inflador</td>
+                        <td class= "precio" >$5.400</td>
+                        <td><input class="cantidad" type="number" name="qprod" id="qprod" placeholder="Cant."></td>
+                        <td>$5.400</td>
+
+                    </tr>
             </table>
-            </ul>
+
             </section>
             <br>
-            <p class="divisor"></p>
+            
             <br>
             <br>
             <section class="container-botones">
@@ -107,7 +109,7 @@
         </main>
 
 
-        <%- include('partials/footer') %>
+        <%- include('../partials/footer') %>
 
     </body>
 
