@@ -3,9 +3,10 @@ const express = require('express')
 const app = express()
 const port = process.env.PORT;
 const path = require('path');
-//const productsRoutes = require('./routes/productsRoutes');
+
 const indexRoutes = require('./routes/indexRoutes');
 const userRoutes = require('./routes/userRoutes');
+const productsRoutes = require('./routes/productRoutes');
 
 
 app.use(express.static('public')); // Defino a la carpeta public como la que tiene todos los assets
@@ -20,6 +21,7 @@ app.use(express.json());
 app.use('/', indexRoutes); // Rutas de la home pasan a controlarlas indexRoutes
 app.use('/login', userRoutes);  // Rutas de login y register pasan a controlarlas userRoutes
 app.use('/register', userRoutes); // Rutas de login y register pasan a controlarlas userRoutes
+app.use('/products', productsRoutes); // Rutas de edit y create pasan a controlarlas userRoutes
 
 app.get('/producto', (req, res) => {
     res.render('productos/producto');
@@ -35,6 +37,6 @@ app.use((req, res, next) => {
 });
 
 
-app.listen(port || 3000, () => {
+app.listen(port || 3003, () => {
     console.log('Vamo arribaaaa neneeee 🤟      Mandale mecha al puerto 3000');
 });

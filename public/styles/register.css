@@ -39,6 +39,7 @@ body main section {
     max-width: 450px;
     border-radius: 5px;
 }
+.tituloEdit,
 .crearcuenta {
     text-align: center;
     font-size: 19px;
