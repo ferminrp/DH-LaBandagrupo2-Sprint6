@@ -19,8 +19,7 @@ app.use(express.json());
 
 
 app.use('/', indexRoutes); // Rutas de la home pasan a controlarlas indexRoutes
-app.use('/login', userRoutes);  // Rutas de login y register pasan a controlarlas userRoutes
-app.use('/register', userRoutes); // Rutas de login y register pasan a controlarlas userRoutes
+app.use('/', userRoutes);  // Rutas de login y register pasan a controlarlas userRoutes
 app.use('/products', productsRoutes); // Rutas de edit y create pasan a controlarlas userRoutes
 
 app.get('/producto', (req, res) => {
@@ -37,6 +36,6 @@ app.use((req, res, next) => {
 });
 
 
-app.listen(port || 3003, () => {
+app.listen(port || 3000, () => {
     console.log('Vamo arribaaaa neneeee 🤟      Mandale mecha al puerto 3000');
 });

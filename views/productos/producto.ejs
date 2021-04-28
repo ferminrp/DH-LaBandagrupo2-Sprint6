@@ -7,21 +7,7 @@
     </head>
 
     <body>
-        <header>
-            <div class="header-left">
-                <div class="logo"></div>
-                <h3>WaveRunners</h3>
-            </div>
-            <input type="text" name="search" id="search" placeholder="Busca productos">
-            <div class="header-right">
-                <ul>
-                    <li><a href="/login">Login</a></li>
-                    <li><a href="/register">Registrarse</a></li>
-                </ul>
-                <div class="avatar"></div>
-                <i class="fas fa-bars"></i>
-            </div>
-        </header>
+        <%- include('../partials/header') %>
 
 
         <main>
@@ -60,7 +46,7 @@
                             <option value="cantidad02">02</option>
                             <option value="cantidad03">03</option>
                         </select>
-                        <div class="product-buttons">
+                        <div>
                             <button type="submit">COMPRAR AHORA</button>
                             <button type="submit">AGREGAR AL CARRITO</button>
                         </div>
@@ -107,7 +93,7 @@
         </main>
 
 
-        <%- include('partials/footer') %>
+        <%- include('../partials/footer') %>
 
     </body>
 
