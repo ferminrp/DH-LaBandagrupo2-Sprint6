@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head') %>
+        <title>Wave Runners</title>
+        <link rel="stylesheet" href="styles/register.css">
+</head>
+
+<body>
+    <%- include('../partials/header') %>
+        <main class="mainbody">
+            <section class="sectionbody">
+                <h3 class="tituloEdit">Edicion del producto</h3>
+
+                <form action="" method="POST" enctype="multipart/form-data">
+                    <div class="divflex">
+                        <div class="nameProduct">
+                            <label for="name">Nombre</label>
+                            <input type="text" name="nameProduct" required>
+                        </div>
+
+                        <div>
+                            <label for="infoProduct">Descripcion</label>
+                            <input type="text" name="infoProduct" required>
+                        </div>
+
+                        <div>
+                            <label for="categoryProduct">Categoria</label>
+                            <select name="categoryProduct" id="categoryProduct" required>
+                                <option value="Surf">Surf</option>
+                                <option value="Kitesurf">Kitesurf</option>
+                                <option value="Paddlesurf">Paddlesurf</option>
+                                <option value="Wakeboard">Wakeboard</option>
+                                <option value="Snorkel">Snorkel</option>
+                                <option value="Windsurf">Windsurf</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="subCategoryProduct">Sub categoria</label>
+                            <select name="subCategoryProduct" id="subCategoryProduct" required>
+                                <option value="Trajes">Trajes</option>
+                                <option value="Tablas">Tablas</option>
+                                <option value="Cera">Cera</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="image">Imagen</label>
+                            <input type="file" name="imageProduct" required>
+                        </div>
+
+
+                        <div>
+                            <label for="price">Precio</label>
+                            <input type="text" name="priceProduct" required>
+                        </div>
+
+                        <div>
+                            <label for="descuento">descuento</label>
+                            <input type="text" name="descuentoProduct" required>
+                        </div>
+
+                        <div class="divboton">
+                            <button type="submit">Editar producto</button>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </main>
+        <%- include('../partials/footer') %>
+</body>
+
+</html>
