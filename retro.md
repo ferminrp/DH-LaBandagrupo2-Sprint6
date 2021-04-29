@@ -19,7 +19,6 @@
 - Pullear siempre que nos sentamos.
 - Avisar cuando estamos por pushear o pullear
 
-
 ### 2. Hacer más
 - Tener mas clara la planificacion antes de tirar codigo.
 - Alinearse mas en equipo.
