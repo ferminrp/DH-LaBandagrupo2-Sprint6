@@ -22,7 +22,7 @@ app.use('/', indexRoutes); // Rutas de la home pasan a controlarlas indexRoutes
 app.use('/', userRoutes);  // Rutas de login y register pasan a controlarlas userRoutes
 app.use('/products', productsRoutes); // Rutas de edit y create pasan a controlarlas userRoutes
 
-app.get('/producto', (req, res) => {
+/* app.get('/producto', (req, res) => {
     res.render('productos/producto');
 });
 
@@ -34,6 +34,7 @@ app.get('/carrito', (req, res) => {
 app.use((req, res, next) => {
     res.status(404).render("not-found");
 });
+*/
 
 
 app.listen(port || 3000, () => {
