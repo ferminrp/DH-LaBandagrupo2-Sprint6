@@ -24,8 +24,8 @@
                     </div>
                 </article>
                 <article class="product-detalle">
-                    <h3 class="product-name">KITE NORTH VEGAS 2018</h3>
-                    <h2 class="product-price">$99.999</h2>
+                    <h3 class="product-name"><%= product.nombre_producto %></h3>
+                    <h2 class="product-price"><%= product.precio %></h2>
                     <br>
                     <h4 class="product-form-title">DETALLE</h4>
                     <form action="#" method="POST" class="product-form">
@@ -63,11 +63,7 @@
                     </div>
                     <h4 class="product-info-title">DESCRIPCION</h4>
                     <p class="product-info">
-                        ipsum dolor sit, amet consectetur adipisicing elit. Rem reiciendis necessitatibus iusto sequi,
-                        assumenda, totam commodi exercitationem, quasi debitis quae tempore quo odio libero id molestiae
-                        est veniam neque voluptatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
-                        nobis eos quaerat aut, rem omnis. Numquam vero eaque rerum? Maxime nulla illo ullam sunt, optio
-                        ad laborum ipsum quia est?
+                        <%= product.descripcion %>
                     </p>
                 </article>
             </section>
