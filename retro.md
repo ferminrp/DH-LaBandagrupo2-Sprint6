@@ -9,6 +9,7 @@
 ### 4. Hacer menos
 
 ### 5. Dejar de hacer
+
 ---
 
 # Retro del Sprint 2
