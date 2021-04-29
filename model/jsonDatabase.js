@@ -19,6 +19,7 @@ const model = function (name) {
         writeFile : function(contents) {
             let tableContents = JSON.stringify(contents, null, ' ');
             fs.writeFileSync(this.tablePath, tableContents);
+            return true
         },
 // Averiguo el próximo id
         nextId:function() {
