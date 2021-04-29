@@ -1,11 +1,15 @@
 # Retro del Sprint 3
 
 ### 1. Comenzar a hacer
-
+Organizar las tareas prioritarias que comprometen a otras, creando prioridades en el Trello. 
 ### 2. Hacer más
-
+Hacer la mayor parte del sprint la primera semana.
 ### 3. Continuar haciendo.
-
+Dos reuniones semanales.
+Utilizar el trello para organizar el trabajo.
+Distribuyendo las tareas entre todos en forma equitativa. 
+Comunicandonos por Slack.
+Pidiendo ayuda cuando nos trabamos.
 ### 4. Hacer menos
 
 ### 5. Dejar de hacer
