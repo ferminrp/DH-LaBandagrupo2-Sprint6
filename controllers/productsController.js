@@ -34,27 +34,23 @@ let productController = {
         res.render('productos/createProduct');
     },
 // Función que simula el almacenamiento, en este caso en array
-    store: (req, res) => {
-        console.log('Entre a store')
-        console.log(req.files);
-    
 
-
-     // Atrapo los contenido del formulario
-        const product = req.body;
-
-         // Verificar si viene un archivo, para nombrarlo  
-         product.image = req.file ? req.file.filename : '';
-      
-        console.log(product.image)
-
-    // Delego la responsabilidad al modelo para crear producto  
-       console.log(product)
-    // Cuidade sólo mando el cuerpo del FORM, el Id me lo asigna el Modelo  
-    productModel.create(product);
-   
-        res.redirect('/')
-    },
+store: (req, res) => {
+    const body = req.body;
+    let products = productModel.readFile();
+    const maxIdProduct = products.reduce( (curr, next) => curr.id >= next.id ? curr : next );
+    const newProduct = {
+        id: maxIdProduct.id + 1,
+        name: body.name,
+        brand: body.brand,
+        price: Number(body.price)
+        // Completar resto de propiedades para que todos los productos queden iguales. 
+    }
+    products.push(newProduct);
+    const isCreated = productModel.writeFile(products);
+    if ( isCreated ) return res.redirect('/products/'+newProduct.id);                         // Luego lo podemos mandar a la pagin del nuevo producto // Si se cre'o, redirijo a listado (/products/)
+    return res.send('Error inesperado al crear el producto');                // Si no se borró, muestro error inesperado
+},
 
 // FUnción que muestra el formulario de edición
     edit: (req, res) => {

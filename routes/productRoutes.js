@@ -6,11 +6,12 @@ const productController = require('../controllers/productsController');
 
 router.get('/create', productController.create);
 router.get('/cart', productController.cart);
+router.post('/store', productController.store);
 router.get('/:id', productController.show);
 router.get('/:id/edit', productController.edit);
 
 
-//router.post('/store', productController.store);
+
 //router.put('/:id', productController.update);
 
 //router.delete('/:id', productController.destroy);
