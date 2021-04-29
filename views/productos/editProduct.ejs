@@ -18,17 +18,18 @@
                     <div class="divflex">
                         <div class="nameProduct">
                             <label for="name">Nombre</label>
-                            <input type="text" name="nameProduct" required>
+                            <input type="text" name="nameProduct" value="<%= product.nombre_producto %>" required>
                         </div>
 
                         <div>
                             <label for="infoProduct">Descripcion</label>
-                            <input type="text" name="infoProduct" required>
+                            <input type="text" name="infoProduct" value="<%= product.descripcion %>" required>
                         </div>
 
                         <div>
                             <label for="categoryProduct">Categoria</label>
                             <select name="categoryProduct" id="categoryProduct" required>
+                                <option value="<%= product.categoria %>"><%= product.categoria %></option>
                                 <option value="Surf">Surf</option>
                                 <option value="Kitesurf">Kitesurf</option>
                                 <option value="Paddlesurf">Paddlesurf</option>
