@@ -4,6 +4,10 @@ const path = require('path');
 
 const productController = require('../controllers/productsController');
 
+
+
+
+router.get('/', productController.show1);
 router.get('/create', productController.create);
 router.get('/cart', productController.cart);
 router.post('/store', productController.store);
