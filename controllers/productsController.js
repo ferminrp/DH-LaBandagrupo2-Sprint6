@@ -2,7 +2,7 @@
 const jsonDB = require('../model/jsonDatabase');
 
 // Maneja todos los métodos para PRODUCTO, que lo pasa como parámetro
-const productModel = jsonDB('../data/products');
+const productModel = jsonDB('../data/products01');
 
 let productController = {
 
