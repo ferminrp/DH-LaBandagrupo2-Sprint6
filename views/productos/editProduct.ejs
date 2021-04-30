@@ -42,6 +42,7 @@
                         <div>
                             <label for="subCategoryProduct">Sub categoria</label>
                             <select name="subCategoryProduct" id="subCategoryProduct" required>
+                                <option value="<%= product.subCategoryProduct %>"><%= product.categoria %></option>
                                 <option value="Trajes">Trajes</option>
                                 <option value="Tablas">Tablas</option>
                                 <option value="Cera">Cera</option>
@@ -56,12 +57,12 @@
 
                         <div>
                             <label for="price">Precio</label>
-                            <input type="text" name="priceProduct" required>
+                            <input type="text" name="priceProduct" value="<%= product.priceProduct %>" required>
                         </div>
 
                         <div>
                             <label for="descuento">descuento</label>
-                            <input type="text" name="descuentoProduct" required>
+                            <input type="text" name="descuentoProduct" value="<%= product.priceProduct %>" required>
                         </div>
 
                         <div class="divboton">
