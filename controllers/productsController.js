@@ -22,7 +22,7 @@ let productController = {
         const product = productModel.find(req.params.id);
         console.log(product)
         if (product) { 
-            res.render('productos/producto', { product });
+            res.render('productos/detailProduct', { product });
         } else {
             res.render('not-found');
         } 
@@ -113,7 +113,6 @@ store: (req, res) => {
 
 
     cart: (req, res) => {
-        console.log('llegue aca');
         res.render('productos/carrito');
     },
 
@@ -121,6 +120,15 @@ store: (req, res) => {
 
         let dataABuscar = req.query
         res.sed(dataABuscar)
+    },
+
+    show1: (req, res) => {
+
+        const products = productModel.all();
+
+        res.render('productos/listProduct', { products });
+
+
     }
 
 }
