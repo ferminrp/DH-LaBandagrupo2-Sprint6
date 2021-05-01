@@ -56,8 +56,6 @@ store: (req, res) => {
     edit: (req, res) => {
    // Delego al modelo que busque el producto     
         let product = productModel.find(req.params.id);
-        let categoria = product.categoria;
-        let array_categorias = [surf, kite, snorkel]
 
         console.log(product)
         if (product) {
