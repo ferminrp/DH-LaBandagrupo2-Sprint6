@@ -16,7 +16,7 @@ router.get('/:id/edit', productController.edit);
 
 
 
-//router.put('/:id', productController.update);
+router.put('/:id', productController.update);
 
 //router.delete('/:id', productController.destroy);
 
