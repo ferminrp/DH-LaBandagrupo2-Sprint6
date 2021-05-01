@@ -13,59 +13,60 @@ let productController = {
 
     },
 
-// Función que muestra el detalle del producto, cuando hacemos click en la foto
+    // Función que muestra el detalle del producto, cuando hacemos click en la foto
     show: (req, res) => {
 
-     // Le delego al modelo la responsabilidad
-     // que la busque por ID del registro seleccionado 
-     // es por ello que atrapo em parámetro id  
+        // Le delego al modelo la responsabilidad
+        // que la busque por ID del registro seleccionado
+        // es por ello que atrapo em parámetro id
         const product = productModel.find(req.params.id);
         console.log(product)
-        if (product) { 
-            res.render('productos/detailProduct', { product });
+        if (product) {
+            res.render('productos/detailProduct', {product});
         } else {
             res.render('not-found');
-        } 
+        }
     },
 
-// Función que muestra el formulario de crear Productos
+    // Función que muestra el formulario de crear Productos
     create: (req, res) => {
         console.log('Entre a create')
         res.render('productos/createProduct');
     },
-// Función que simula el almacenamiento, en este caso en array
+    // Función que simula el almacenamiento, en este caso en array
 
-store: (req, res) => {
-    const body = req.body;
-    let products = productModel.readFile();
-    const maxIdProduct = products.reduce( (curr, next) => curr.id >= next.id ? curr : next );
-    const newProduct = {
-        id: maxIdProduct.id + 1,
-        name: body.name,
-        brand: body.brand,
-        price: Number(body.price)
-        // Completar resto de propiedades para que todos los productos queden iguales. 
-    }
-    products.push(newProduct);
-    const isCreated = productModel.writeFile(products);
-    if ( isCreated ) return res.redirect('/products/'+newProduct.id);                         // Luego lo podemos mandar a la pagin del nuevo producto // Si se cre'o, redirijo a listado (/products/)
-    return res.send('Error inesperado al crear el producto');                // Si no se borró, muestro error inesperado
-},
+    store: (req, res) => {
+        const body = req.body;
+        let products = productModel.readFile();
+        const maxIdProduct = products.reduce((curr, next) => curr.id >= next.id ? curr : next);
+        const newProduct = {
+            id: maxIdProduct.id + 1,
+            name: body.name,
+            brand: body.brand,
+            price: Number(body.price)
+            // Completar resto de propiedades para que todos los productos queden iguales.
+        }
+        products.push(newProduct);
+        const isCreated = productModel.writeFile(products);
+        if (isCreated) 
+            return res.redirect('/products/' + newProduct.id);
+         // Luego lo podemos mandar a la pagin del nuevo producto // Si se cre'o, redirijo a listado (/products/)
+        return res.send('Error inesperado al crear el producto'); // Si no se borró, muestro error inesperado
+    },
 
-// FUnción que muestra el formulario de edición
-    edit: (req, res) => {
-   // Delego al modelo que busque el producto     
+    // FUnción que muestra el formulario de edición
+    edit: (req, res) => { // Delego al modelo que busque el producto
         let product = productModel.find(req.params.id);
 
         console.log(product)
         if (product) {
-            res.render('productos/editProduct', { product });
+            res.render('productos/editProduct', {product});
         } else {
             res.render('error404');
         }
     },
 
-// Función que realiza cambios en el producto seleccionado
+    // Función que realiza cambios en el producto seleccionado
     update: (req, res) => {
         console.log("Entré al update")
         // Armo la estructura del registro auxiliar (product)
@@ -100,12 +101,12 @@ store: (req, res) => {
         res.redirect('/')
     },
 
-// Función que elimina del Array visitados ek producto seleccionado
+    // Función que elimina del Array visitados ek producto seleccionado
     destroy: (req, res) => {
         console.log('entre destroy')
         productModel.delete(req.params.id);
 
- // Ahora se mostrará todo porque los productos los varga de un archivo       
+        // Ahora se mostrará todo porque los productos los varga de un archivo
         res.redirect('/')
     },
 
@@ -124,7 +125,7 @@ store: (req, res) => {
 
         const products = productModel.all();
 
-        res.render('productos/listProduct', { products });
+        res.render('productos/listProduct', {products});
 
 
     }

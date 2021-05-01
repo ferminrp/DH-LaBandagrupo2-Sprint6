@@ -49,9 +49,20 @@
                             </select>
                         </div>
 
-                        <div>
+                        <div class="field">
                             <label for="image">Imagen</label>
-                            <input type="file" name="imageProduct" value="product.imagen">
+                            <div class="control">
+                             
+                                <input type="file" name="image">
+                                <input type="hidden" name="oldImage" value="<%= product.image %>">
+                               
+                           
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="color">color</label>
+                            <input type="text" name="colorProduct" value="<%= product.colorProduct %>" required>
                         </div>
 
 
