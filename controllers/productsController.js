@@ -58,7 +58,7 @@ let productController = {
     edit: (req, res) => { // Delego al modelo que busque el producto
         let product = productModel.find(req.params.id);
 
-        console.log(product)
+        console.log("Abri la pagina de edicion de "+product.id+" "+product.nombre_producto)
         if (product) {
             res.render('productos/editProduct', {product});
         } else {
@@ -71,14 +71,10 @@ let productController = {
         console.log("Entré al update")
         // Armo la estructura del registro auxiliar (product)
   
-        let  product = req.body;
-      
- 
-        console.log(' soy la nueva: ' +req.body.image)
-        console.log('soy la vieja '+ req.body.oldImage)
-        product.id = req.params.id;
+        const body = req.body;
+        console.log(body);
 
-     
+     /*
           product.image = req.file ? req.file.filename : req.body.oldImagen;
         
           if (req.body.image===undefined) {
@@ -88,8 +84,8 @@ let productController = {
           console.log('.......MOSTRA LA IMAGEN.......')
         console.log(product.image)
         console.log(product)
-       
-       
+      
+
       // Elimino de la estructura auxiliar, porque no existe en Json 
         delete product.oldImage;
 
@@ -97,8 +93,9 @@ let productController = {
         // Delego la responsabilidad al modelo que actualice
         productModel.update(product);
           
-
-        res.redirect('/')
+*/  
+        res.redirect('/products/')
+        res.redirect('/products/'+product.id)
     },
 
     // Función que elimina del Array visitados ek producto seleccionado

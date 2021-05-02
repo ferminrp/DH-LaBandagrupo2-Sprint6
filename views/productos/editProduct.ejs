@@ -17,13 +17,13 @@
                 <form action="/products/<%=  product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                     <div class="divflex">
                         <div class="nameProduct">
-                            <label for="name">Nombre</label>
-                            <input type="text" name="nameProduct" value="<%= product.nombre_producto %>" required>
+                            <label for="nameProduct">Nombre</label>
+                            <input id="nameProduct" type="text" name="nameProduct" value="<%= product.nombre_producto %>" required>
                         </div>
 
                         <div>
                             <label for="infoProduct">Descripcion</label>
-                            <input type="text" name="infoProduct" value="<%= product.descripcion %>" required>
+                            <input id="infoProduct" type="text" name="infoProduct" value="<%= product.descripcion %>" required>
                         </div>
 
                         <div>
