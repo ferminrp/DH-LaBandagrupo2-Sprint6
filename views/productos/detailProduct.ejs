@@ -14,13 +14,13 @@
         <main>
             <section class="product">
                 <article class="product-images">
-                    <div class="images-second">
+                    <!-- <div class="images-second">
                         <img src="./images/producto/producto-kite07.jpg">
                         <img src="./images/producto/producto-kite06.jpg">
                         <img src="./images/producto/producto-kite05.jpg">
-                    </div>
+                    </div> -->
                     <div class="images-first">
-                        <img src="./images/producto/producto-kite.jpg">
+                        <img src="<%= product.imagen %>">
                     </div>
                 </article>
                 <article class="product-detalle">
@@ -71,19 +71,19 @@
                 <h4 class="product-related-title">PRODUCTOS RELACIONADOS</h4>
                 <article class="product-related">
                     <div class="product-related-son">
-                        <img src="./images/producto/producto-kite04.jpg">
-                        <p class="related-name">Lorem ipsum</p>
-                        <div class="related-price">$99.999</div>
+                        <img src="<%= product.imagen %>">
+                        <p class="related-name"><%= product.nombre_producto %></p>
+                        <div class="related-price"><%= product.precio %></div>
                     </div>
                     <div class="product-related-son">
-                        <img src="./images/producto/producto-kite03.png">
-                        <p class="related-name">Lorem ipsum</p>
-                        <div class="related-price">$99.999</div>
+                        <img src="<%= product.imagen %>">
+                        <p class="related-name"><%= product.nombre_producto %></p>
+                        <div class="related-price"><%= product.precio %></div>
                     </div>
                     <div class="product-related-son">
-                        <img src="./images/producto/producto-kite02.png">
-                        <p class="related-name">Lorem ipsum</p>
-                        <div class="related-price">$99.999</div>
+                        <img src="<%= product.imagen %>">
+                        <p class="related-name"><%= product.nombre_producto %></p>
+                        <div class="related-price"><%= product.precio %></div>
                     </div>
                 </article>
             </section>

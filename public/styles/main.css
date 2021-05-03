@@ -21,6 +21,7 @@ a:visited {
 /* Estilos del header */
 
 header {
+    color: #395ca4;
     display: flex;
     justify-content: space-between;
     padding: 10px;
