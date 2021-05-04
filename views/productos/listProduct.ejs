@@ -9,13 +9,14 @@
     <%- include('../partials/header') %>
     <main>
         <section>
-
-                    
-                    <% products.forEach(product => { %>
-                        <%- include('../partials/product', { product }) %>
-                    <% })%>
-                   
-
+            <form action="/products/create" method="GET">
+                <button type="submit">CREAR PRODUCTO</button>
+            </form>
+        </section>
+        <section>
+            <% products.forEach(product => { %>
+                <%- include('../partials/product', { product }) %>
+            <% })%>
         </section>
     </main>
     <%- include('../partials/footer') %>

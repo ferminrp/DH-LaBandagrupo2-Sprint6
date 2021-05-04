@@ -36,15 +36,21 @@ let productController = {
     // Función que simula el almacenamiento, en este caso en array
 
     store: (req, res) => {
+        console.log('Entre a store')
+        console.log(req.body);
+        console.log(req.file);
         const body = req.body;
         let products = productModel.readFile();
         const maxIdProduct = products.reduce((curr, next) => curr.id >= next.id ? curr : next);
         const newProduct = {
             id: maxIdProduct.id + 1,
-            name: body.name,
-            brand: body.brand,
-            price: Number(body.price)
-            // Completar resto de propiedades para que todos los productos queden iguales.
+            nombre_producto: body.nombre_producto,
+            descripcion: body.descripcion,
+            categoria: body.categoria,
+            subcategoria: body.subcategoria,
+            precio:body.precio,
+            descuento: body.descuento
+            
         }
         products.push(newProduct);
         const isCreated = productModel.writeFile(products);
@@ -53,8 +59,7 @@ let productController = {
          // Luego lo podemos mandar a la pagin del nuevo producto // Si se cre'o, redirijo a listado (/products/)
         return res.send('Error inesperado al crear el producto'); // Si no se borró, muestro error inesperado
     },
-
-    // FUnción que muestra el formulario de edición
+    
     edit: (req, res) => { // Delego al modelo que busque el producto
         let product = productModel.find(req.params.id);
 
@@ -68,14 +73,11 @@ let productController = {
 
     // Función que realiza cambios en el producto seleccionado
     update: (req, res) => {
-        console.log("Entré al update")
-        // Armo la estructura del registro auxiliar (product)
-  
-        const body = req.body;
-        console.log(body);
+        let product = req.body;
+        console.log('product');
+        product.id = req.params.id;
 
-     /*
-          product.image = req.file ? req.file.filename : req.body.oldImagen;
+         product.image = req.file ? req.file.filename : req.body.oldImagen;
         
           if (req.body.image===undefined) {
             product.image = product.oldImage
@@ -93,8 +95,8 @@ let productController = {
         // Delego la responsabilidad al modelo que actualice
         productModel.update(product);
           
-*/  
-        res.redirect('/products/')
+
+
         res.redirect('/products/'+product.id)
     },
 

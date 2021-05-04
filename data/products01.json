@@ -1,39 +1,15 @@
 [
  {
-  "id": 1,
-  "nombre_producto": "Mushroom - Shitake, Dry",
-  "descripcion": "Donec posuere metus vitae ipsum. Aliquam non mauris. Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis. Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem. Sed sagittis.",
-  "precio": 5692.83,
+  "id": 3,
+  "nombre_producto": "Club Soda - Schweppes, 355 Ml",
+  "descripcion": "In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.",
+  "precio": 4668.21,
   "imagen": "https://i.imgur.com/kWditHR.jpg",
-  "categoria": "Home",
-  "subcategoria": "Books",
-  "colorProduct": "Fuscia",
-  "sizeProduct": "L",
-  "descuento": 793.77
- },
- {
-  "id": 2,
-  "nombre_producto": "Potatoes - Parissienne",
-  "descripcion": "Maecenas rhoncus aliquam lacus.",
-  "precio": 6329.23,
-  "imagen": "https://i.imgur.com/kWditHR.jpg",
-  "categoria": "Games",
-  "subcategoria": "Clothing",
-  "colorProduct": "Fuscia",
-  "sizeProduct": "S",
-  "descuento": -102.28
- },
- {
-    "id": 3,
-    "nombre_producto": "Club Soda - Schweppes, 355 Ml",
-    "descripcion": "In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.",
-    "precio": 4668.21,
-    "imagen": "https://i.imgur.com/kWditHR.jpg",
-    "categoria": "Baby",
-    "subcategoria": "Games",
-    "colorProduct": "Puce",
-    "sizeProduct": "2XL",
-    "descuento": 582.48
+  "categoria": "Baby",
+  "subcategoria": "Games",
+  "colorProduct": "Puce",
+  "sizeProduct": "2XL",
+  "descuento": 582.48
  },
  {
   "id": 4,
@@ -1198,5 +1174,14 @@
   "colorProduct": "Indigo",
   "sizeProduct": "M",
   "descuento": 772.78
+ },
+ {
+  "id": 101,
+  "nombre_producto": "jababaluza",
+  "descripcion": "asdasdasdasdasdasdass",
+  "categoria": "Paddlesurf",
+  "subcategoria": "Tablas",
+  "precio": "10000",
+  "descuento": "50"
  }
 ]
