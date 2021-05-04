@@ -24,8 +24,8 @@ router.get('/:id', productController.show);
 router.get('/search', productController.search);
 router.get('/:id/edit', productController.edit);
 
-router.post('/store', upload.single('image'), productController.store);
-router.put('/:id', upload.single('image'), productController.update);
+router.post('/create', upload.single('imagen'), productController.store);
+router.put('/:id', upload.single('imagen'), productController.update);
 
 router.delete('/:id', productController.destroy);
 

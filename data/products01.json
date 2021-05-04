@@ -1,17 +1,5 @@
 [
  {
-  "id": 3,
-  "nombre_producto": "Club Soda - Schweppes, 355 Ml",
-  "descripcion": "In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.",
-  "precio": 4668.21,
-  "imagen": "https://i.imgur.com/kWditHR.jpg",
-  "categoria": "Baby",
-  "subcategoria": "Games",
-  "colorProduct": "Puce",
-  "sizeProduct": "2XL",
-  "descuento": 582.48
- },
- {
   "id": 4,
   "nombre_producto": "Potatoes - Peeled",
   "descripcion": "Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam.",
@@ -1183,5 +1171,15 @@
   "subcategoria": "Tablas",
   "precio": "10000",
   "descuento": "50"
+ },
+ {
+  "nombre_producto": "github",
+  "descripcion": "github",
+  "categoria": "Surf",
+  "subcategoria": "Trajes",
+  "precio": "20001",
+  "descuento": "20000",
+  "imagen": "img-1620169638466.jpg",
+  "id": 102
  }
 ]

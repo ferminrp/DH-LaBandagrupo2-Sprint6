@@ -36,28 +36,16 @@ let productController = {
     // Función que simula el almacenamiento, en este caso en array
 
     store: (req, res) => {
-        console.log('Entre a store')
-        console.log(req.body);
-        console.log(req.file);
-        const body = req.body;
-        let products = productModel.readFile();
-        const maxIdProduct = products.reduce((curr, next) => curr.id >= next.id ? curr : next);
-        const newProduct = {
-            id: maxIdProduct.id + 1,
-            nombre_producto: body.nombre_producto,
-            descripcion: body.descripcion,
-            categoria: body.categoria,
-            subcategoria: body.subcategoria,
-            precio:body.precio,
-            descuento: body.descuento
-            
-        }
-        products.push(newProduct);
-        const isCreated = productModel.writeFile(products);
-        if (isCreated) 
-            return res.redirect('/products/' + newProduct.id);
-         // Luego lo podemos mandar a la pagin del nuevo producto // Si se cre'o, redirijo a listado (/products/)
-        return res.send('Error inesperado al crear el producto'); // Si no se borró, muestro error inesperado
+        console.log(req.files);
+        // Atrapa los contenidos del formulario... Ponele
+        const product = req.body;
+        // Verificar si viene un archivo, para nombrarlo.
+        product.imagen = req.file ? req.file.filename : '';
+        console.log(product.imagen);
+        console.log(product);
+        // Cuidado sólo mando el cuerpo del FORM, el Id me lo asigna el Modelo  
+        productModel.create(product);
+            res.redirect('/');
     },
     
     edit: (req, res) => { // Delego al modelo que busque el producto
