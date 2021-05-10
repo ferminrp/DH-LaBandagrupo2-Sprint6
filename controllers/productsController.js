@@ -65,19 +65,19 @@ let productController = {
         console.log('product');
         product.id = req.params.id;
 
-         product.image = req.file ? req.file.filename : req.body.oldImagen;
+         product.imagen = req.file ? req.file.filename : req.body.oldImagen;
         
-          if (req.body.image===undefined) {
-            product.image = product.oldImage
+          if (req.body.imagen===undefined) {
+            product.imagen = product.oldImagen
         }
         
           console.log('.......MOSTRA LA IMAGEN.......')
-        console.log(product.image)
+        console.log(product.imagen)
         console.log(product)
       
 
       // Elimino de la estructura auxiliar, porque no existe en Json 
-        delete product.oldImage;
+        delete product.oldImagen;
 
 
         // Delego la responsabilidad al modelo que actualice

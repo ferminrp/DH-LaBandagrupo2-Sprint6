@@ -1,15 +1,13 @@
 [
  {
-  "id": 4,
-  "nombre_producto": "Potatoes - Peeled",
+  "nombre_producto": "Nombre editado",
   "descripcion": "Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam.",
-  "precio": 4490.9,
+  "categoria": "Kitesurf",
+  "subcategoria": "Tablas",
   "imagen": "kWditHR.jpg",
-  "categoria": "Electronics",
-  "subcategoria": "Books",
-  "colorProduct": "Violet",
-  "sizeProduct": "S",
-  "descuento": 268.02
+  "precio": "4490.9",
+  "descuento": "2268.02",
+  "id": "4"
  },
  {
   "id": 5,
