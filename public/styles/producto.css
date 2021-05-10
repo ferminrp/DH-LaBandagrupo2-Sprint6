@@ -113,6 +113,15 @@ section article div i{
 
 
 
+/*-----EDITAR-PRODUCTO-----*/
+
+.edit-bottom{
+    margin: 40px auto;
+    max-width: 30%;
+
+
+}
+
 /*-----PRODUCTOS-RELACIONADOS-----*/
 
 .product-related-title{

@@ -36,25 +36,18 @@ let productController = {
     // Función que simula el almacenamiento, en este caso en array
 
     store: (req, res) => {
-        const body = req.body;
-        let products = productModel.readFile();
-        const maxIdProduct = products.reduce((curr, next) => curr.id >= next.id ? curr : next);
-        const newProduct = {
-            id: maxIdProduct.id + 1,
-            name: body.name,
-            brand: body.brand,
-            price: Number(body.price)
-            // Completar resto de propiedades para que todos los productos queden iguales.
-        }
-        products.push(newProduct);
-        const isCreated = productModel.writeFile(products);
-        if (isCreated) 
-            return res.redirect('/products/' + newProduct.id);
-         // Luego lo podemos mandar a la pagin del nuevo producto // Si se cre'o, redirijo a listado (/products/)
-        return res.send('Error inesperado al crear el producto'); // Si no se borró, muestro error inesperado
+        console.log(req.files);
+        // Atrapa los contenidos del formulario... Ponele
+        const product = req.body;
+        // Verificar si viene un archivo, para nombrarlo.
+        product.imagen = req.file ? req.file.filename : '';
+        console.log(product.imagen);
+        console.log(product);
+        // Cuidado sólo mando el cuerpo del FORM, el Id me lo asigna el Modelo  
+        productModel.create(product);
+            res.redirect('/');
     },
-
-    // FUnción que muestra el formulario de edición
+    
     edit: (req, res) => { // Delego al modelo que busque el producto
         let product = productModel.find(req.params.id);
 
@@ -68,33 +61,30 @@ let productController = {
 
     // Función que realiza cambios en el producto seleccionado
     update: (req, res) => {
-        console.log("Entré al update")
-        // Armo la estructura del registro auxiliar (product)
-  
-        const body = req.body;
-        console.log(body);
+        let product = req.body;
+        console.log('product');
+        product.id = req.params.id;
 
-     /*
-          product.image = req.file ? req.file.filename : req.body.oldImagen;
+         product.imagen = req.file ? req.file.filename : req.body.oldImagen;
         
-          if (req.body.image===undefined) {
-            product.image = product.oldImage
+          if (req.body.imagen===undefined) {
+            product.imagen = product.oldImagen
         }
         
           console.log('.......MOSTRA LA IMAGEN.......')
-        console.log(product.image)
+        console.log(product.imagen)
         console.log(product)
       
 
       // Elimino de la estructura auxiliar, porque no existe en Json 
-        delete product.oldImage;
+        delete product.oldImagen;
 
 
         // Delego la responsabilidad al modelo que actualice
         productModel.update(product);
           
-*/  
-        res.redirect('/products/')
+
+
         res.redirect('/products/'+product.id)
     },
 

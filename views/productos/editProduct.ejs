@@ -4,8 +4,9 @@
 
 <%- include('../partials/head') %>
     <title>Wave Runners</title>
-        <link rel="stylesheet" href="../../styles/register.css">
-        <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/home.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/register.css">
 </head>
 
 <body>
@@ -14,21 +15,21 @@
             <section class="sectionbody">
                 <h3 class="tituloEdit">Edicion del producto</h3>
 
-                <form action="/products/<%=  product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                <form action="/products/<%=  product.id %>?_method=PUT" method="POST">
                     <div class="divflex">
                         <div class="nameProduct">
-                            <label for="nameProduct">Nombre</label>
-                            <input id="nameProduct" type="text" name="nameProduct" value="<%= product.nombre_producto %>" required>
+                            <label for="nombre_producto">Nombre</label>
+                            <input id="nombre_producto" type="text" name="nombre_producto" value="<%= product.nombre_producto %>" required>
                         </div>
 
                         <div>
-                            <label for="infoProduct">Descripcion</label>
-                            <input id="infoProduct" type="text" name="infoProduct" value="<%= product.descripcion %>" required>
+                            <label for="descripcion">Descripcion</label>
+                            <input id="descripcion" type="text" name="descripcion" value="<%= product.descripcion %>" required>
                         </div>
 
                         <div>
-                            <label for="categoryProduct">Categoria</label>
-                            <select name="categoryProduct" id="categoryProduct" required>
+                            <label for="categoria">Categoria</label>
+                            <select name="categoria" id="categoria" required>
                                 <option value="<%= product.categoria %>"><%= product.categoria %></option>
                                 <option value="Surf">Surf</option>
                                 <option value="Kitesurf">Kitesurf</option>
@@ -40,9 +41,9 @@
                         </div>
 
                         <div>
-                            <label for="subCategoryProduct">Sub categoria</label>
-                            <select name="subCategoryProduct" id="subCategoryProduct" required>
-                                <option value="<%= product.subCategoryProduct %>"><%= product.categoria %></option>
+                            <label for="subcategoria">Sub categoria</label>
+                            <select name="subcategoria" id="subcategoria" required>
+                                <option value="<%= product.subcategoria %>"><%= product.subcategoria %></option>
                                 <option value="Trajes">Trajes</option>
                                 <option value="Tablas">Tablas</option>
                                 <option value="Cera">Cera</option>
@@ -50,34 +51,34 @@
                         </div>
 
                         <div class="field">
-                            <label for="image">Imagen</label>
+                            <label for="imagen">Imagen</label>
                             <div class="control">
                              
-                                <input type="file" name="image">
-                                <input type="hidden" name="oldImage" value="<%= product.image %>">
-                               
+                                <input type="file" name="imagen" id="imagen">
+                                <input type="hidden" name="oldImagen" value="<%= product.imagen %>">
                            
                             </div>
                         </div>
 
                         <div>
-                            <label for="color">color</label>
-                            <input type="text" name="colorProduct" value="<%= product.colorProduct %>" required>
-                        </div>
-
-
-                        <div>
-                            <label for="price">Precio</label>
-                            <input type="text" name="priceProduct" value="<%= product.precio %>" required>
+                            <label for="precio">Precio</label>
+                            <input type="text" name="precio" value="<%= product.precio %>" required>
                         </div>
 
                         <div>
                             <label for="descuento">descuento</label>
-                            <input type="text" name="descuentoProduct" value="<%= product.descuento %>" required>
+                            <input type="text" name="descuento" value="<%= product.descuento %>" required>
                         </div>
 
                         <div class="divboton">
                             <button type="submit">Editar producto</button>
+                        </div>
+                    </div>
+                </form>
+                <form action="/products/<%= product.id %>?_method=DELETE" method="POST">
+                    <div class="divflex">
+                        <div>
+                            <button type="submit">Eliminar Producto</button>
                         </div>
                     </div>
                 </form>
