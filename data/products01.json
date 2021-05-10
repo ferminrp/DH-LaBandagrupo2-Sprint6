@@ -1179,5 +1179,15 @@
   "descuento": "20000",
   "imagen": "img-1620169638466.jpg",
   "id": 102
+ },
+ {
+  "nombre_producto": "tabla gimena",
+  "descripcion": "tu vieja",
+  "categoria": "Surf",
+  "subcategoria": "Trajes",
+  "imagen": "img-1620686336442.jpg",
+  "precio": "49283",
+  "descuento": "3226",
+  "id": "103"
  }
 ]
