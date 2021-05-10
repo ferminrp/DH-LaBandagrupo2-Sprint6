@@ -25,7 +25,7 @@
                 </article>
                 <article class="product-detalle">
                     <h3 class="product-name"><%= product.nombre_producto %></h3>
-                    <h2 class="product-price"><%= product.precio %></h2>
+                    <h2 class="product-price">$<%= Math.round(product.precio - product.descuento).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") %></h2>
                     <br>
                     <h4 class="product-form-title">DETALLE</h4>
                     <form action="#" method="POST" class="product-form">
@@ -56,11 +56,6 @@
             </section>
             <section>
                 <article>
-                    <div class="product-icons">
-                        <i class="fab fa-twitter"></i>
-                        <i class="fab fa-facebook-f"></i>
-                        <i class="fab fa-whatsapp"></i>
-                    </div>
                     <h4 class="product-info-title">DESCRIPCION</h4>
                     <p class="product-info">
                         <%= product.descripcion %>
@@ -74,26 +69,19 @@
                     </form>
                 </article>
             </section>
-            <section>
+            <section class="related-products">
                 <h4 class="product-related-title">PRODUCTOS RELACIONADOS</h4>
-                <article class="product-related">
-                    <div class="product-related-son">
-                        <img src="../images/producto/<%= product.imagen %>">
-                        <p class="related-name"><%= product.nombre_producto %></p>
-                        <div class="related-price"><%= product.precio %></div>
-                    </div>
-                    <div class="product-related-son">
-                        <img src="../images/producto/<%= product.imagen %>">
-                        <p class="related-name"><%= product.nombre_producto %></p>
-                        <div class="related-price"><%= product.precio %></div>
-                    </div>
-                    <div class="product-related-son">
-                        <img src="../images/producto/<%= product.imagen %>">
-                        <p class="related-name"><%= product.nombre_producto %></p>
-                        <div class="related-price"><%= product.precio %></div>
-                    </div>
-                </article>
+                <div class="related-products-grid">
+                <%- include('../partials/product', { product }) %>
+                <%- include('../partials/product', { product }) %>
+                <%- include('../partials/product', { product }) %>
+            </div>
             </section>
+            <div class="product-icons">
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-whatsapp"></i>
+            </div>
         </main>
 
 
