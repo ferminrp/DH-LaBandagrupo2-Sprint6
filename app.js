@@ -29,6 +29,6 @@ app.use((req, res, next) => {
 
 
 
-app.listen(port || 3001, () => {
-    console.log('Vamo arribaaaa neneeee 🤟      Mandale mecha al puerto 3001');
+app.listen(port || 3000, () => {
+    console.log('Vamo arribaaaa neneeee 🤟      Mandale mecha al puerto 3000');
 });
