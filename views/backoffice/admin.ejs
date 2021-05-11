@@ -21,7 +21,7 @@
         <div class="indicators">
             <div class="indicator">
                 <p class="indicator-title">Total de Productos</p>
-                <p class="kpi">15</p>
+                <p class="kpi"><%= productsAmount %></p>
             </div>
             <div class="indicator">
                 <p class="indicator-title">Total de Usuarios</p>
@@ -31,6 +31,11 @@
                 <p class="indicator-title">Total de Ventas</p>
                 <p class="kpi">15</p>
             </div>
+        </div>
+        <div class="filters">
+            <a href="/products/create">
+            <button><i class="fas fa-plus-circle"></i>Crear Nuevo Producto</button>
+        </a>
         </div>
         <table>
             <tr>
@@ -44,18 +49,19 @@
                 <tr>
                     <td>
                         <a href="/products/<%= product.id %>" class="td-flex-container">
-                            <div class="product-img" style="background-image: url('/images/producto/<%= product.imagen %>');"></div>
+                            <div class="product-img"
+                                style="background-image: url('/images/producto/<%= product.imagen %>');"></div>
                             <%= product.nombre_producto %>
                         </a>
                     </td>
                     <td>
-                        $<%= product.precio.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") %>
+                        $<%= product.precio.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "," ) %>
                     </td>
                     <td>
-                        $<%= product.descuento.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") %>
+                        $<%= product.descuento.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "," ) %>
                     </td>
                     <td>
-                        <a href="/products/<%= product.id %>/edit" ><i class="fas fa-edit"></i></a>
+                        <a href="/products/<%= product.id %>/edit"><i class="fas fa-edit"></i></a>
                     </td>
                 </tr>
                 <% })%>
