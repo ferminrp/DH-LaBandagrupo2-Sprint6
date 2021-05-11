@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <%- include('../partials/head') %>
-    <link rel="stylesheet" href="../../styles/admin.css">
-    <link rel="stylesheet" href="../../styles/main.css">
-    <title>Backoffice</title>
+        <link rel="stylesheet" href="../../styles/admin.css">
+        <link rel="stylesheet" href="../../styles/main.css">
+        <title>Backoffice</title>
 </head>
+
 <body>
     <nav>
         <h3>Waverunners</h3>
@@ -30,6 +32,35 @@
                 <p class="kpi">15</p>
             </div>
         </div>
+        <table>
+            <tr>
+                <th>Articulo</th>
+                <th>Precio</th>
+                <th>Descuento</th>
+                <th></th>
+            </tr>
+            <% products.forEach(product=> { %>
+                <!--<%- include('../partials/product', { product }) %>-->
+                <tr>
+                    <td>
+                        <a href="/products/<%= product.id %>" class="td-flex-container">
+                            <div class="product-img" style="background-image: url('/images/producto/<%= product.imagen %>');"></div>
+                            <%= product.nombre_producto %>
+                        </a>
+                    </td>
+                    <td>
+                        $<%= product.precio.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") %>
+                    </td>
+                    <td>
+                        $<%= product.descuento.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") %>
+                    </td>
+                    <td>
+                        <a href="/products/<%= product.id %>/edit" ><i class="fas fa-edit"></i></a>
+                    </td>
+                </tr>
+                <% })%>
+        </table>
     </main>
 </body>
+
 </html>
