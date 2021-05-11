@@ -9,6 +9,10 @@ module.exports = {
     },
     adminProducts: (req, res) => {
         const products = productModel.all();
-        res.render('backoffice/admin', {products});
+        const productsAmount = products.length
+        res.render('backoffice/admin', {
+            products: products,
+            productsAmount: productsAmount
+        });
     }
 };
