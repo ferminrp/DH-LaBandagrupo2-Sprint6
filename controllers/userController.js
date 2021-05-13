@@ -1,21 +1,18 @@
 // ESTO SERIA EL GESTOR DEL MODELO
-const userDB = require('../model/User');
+//const userDB = require('../model/User');
 
 // Maneja todos los métodos para PRODUCTO, que lo pasa como parámetro
-const userModel = userDB('../data/users');
+//const userModel = userDB('../data/users');
 
 // const bcryptjs = require('bcryptjs');
 
-const {
-	validationResult
-} = require('express-validator');
+// const {
+// 	validationResult
+// } = require('express-validator');
 
 
-const model2 = function (name) {
-	console.log('entre al modelo de user')
-	console.log(name)
-	return {
-		tablePath: path.resolve(__dirname, '../data/', `${name}.json`),
+let userController = {
+	
 
 		show: (req, res) => {
 
@@ -35,7 +32,9 @@ const model2 = function (name) {
 			userModel.create(user);
 			res.redirect('/');
 		}
-
-	}
-
+		
+		
 }
+
+
+module.exports = userController
