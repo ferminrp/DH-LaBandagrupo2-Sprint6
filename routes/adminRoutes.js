@@ -9,6 +9,8 @@ router.get('', adminController.admin);
 
 router.get('/products', adminController.adminProducts);
 
+router.get('/users', adminController.adminUsers);
+
 
 
 module.exports = router

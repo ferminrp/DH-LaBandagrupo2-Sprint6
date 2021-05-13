@@ -5,33 +5,20 @@
     <%- include('../partials/head') %>
         <link rel="stylesheet" href="../../styles/admin.css">
         <link rel="stylesheet" href="../../styles/main.css">
-        <title>Backoffice</title>
+        <title>Backoffice | Productos</title>
 </head>
 
 <body>
     <nav>
         <h3>Waverunners</h3>
         <ul>
-            <li><i class="fas fa-archive"></i>Productos</li>
-            <li><i class="fas fa-user"></i>Usuarios</li>
-            <li><i class="fas fa-shopping-bag"></i>Ventas</li>
+            <li><a href="/admin"><i class="fas fa-archive"></i>Productos</a></li>
+            <li style="opacity: 50%"><a href="/admin/users"><i class="fas fa-user"></i>Usuarios</a></li>
+            <li style="opacity: 50%"><i class="fas fa-shopping-bag"></i>Ventas</li>
         </ul>
     </nav>
     <main>
-        <div class="indicators">
-            <div class="indicator">
-                <p class="indicator-title">Total de Productos</p>
-                <p class="kpi"><%= productsAmount %></p>
-            </div>
-            <div class="indicator">
-                <p class="indicator-title">Total de Usuarios</p>
-                <p class="kpi">15</p>
-            </div>
-            <div class="indicator">
-                <p class="indicator-title">Total de Ventas</p>
-                <p class="kpi">15</p>
-            </div>
-        </div>
+        <%- include('../partials/indicators') %>
         <div class="filters">
             <a href="/products/create">
             <button><i class="fas fa-plus-circle"></i>Crear Nuevo Producto</button>

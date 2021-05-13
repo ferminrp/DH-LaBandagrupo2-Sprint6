@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const User = {
+const user =  {
 	fileName: './data/users.json',
 
 	getData: function () {
@@ -51,6 +51,5 @@ const User = {
 	}
 }
 
-console.log(User.generateId());
 
-module.exports = User;
+module.exports = user;
