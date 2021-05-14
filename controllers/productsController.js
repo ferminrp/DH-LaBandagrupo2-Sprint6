@@ -106,7 +106,10 @@ let productController = {
         let dataABuscar = req.query.search;
         const filteredProducts = productModel.search(dataABuscar);
         // Filtrar todos los productos por los que contengan dataABuscar en el titulo y devolver una pagina con esos productos
-        res.render('productos/listProduct', {products : filteredProducts});
+        res.render('productos/listProduct', {
+            products : filteredProducts,
+            query: dataABuscar
+        });
     },
 
     show1: (req, res) => {
