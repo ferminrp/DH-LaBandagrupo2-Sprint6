@@ -82,10 +82,13 @@ const model = function (name) {
         },
         search: function (query) {
             console.log('Estoy buscando los productos ahora')
+            // llamo al metodo que trae todos los productos y lo guardo en una constante
             const allProducts = this.readFile();
+            // filtro todos los productos por aquellos que en el nombre contengan la palabra buscada
             let filteredProducts = allProducts.filter(
                 n => n["nombre_producto"].toUpperCase().includes(query.toUpperCase())
             );
+            // retorno solo la lista filtrada
             return filteredProducts;
         }
 
