@@ -79,6 +79,14 @@ const model = function (name) {
             });
 
             this.writeFile(updatedRows);
+        },
+        search: function (query) {
+            console.log('Estoy buscando los productos ahora')
+            const allProducts = this.readFile();
+            let filteredProducts = allProducts.filter(
+                n => n["nombre_producto"].toUpperCase().includes(query.toUpperCase())
+            );
+            return filteredProducts;
         }
 
 

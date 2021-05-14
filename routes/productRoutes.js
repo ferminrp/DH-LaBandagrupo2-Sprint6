@@ -13,8 +13,8 @@ const upload = require('../middlewares/multerProductsMiddleware')
 router.get('/', productController.show1);
 router.get('/create', productController.create);
 router.get('/cart', productController.cart);
-router.get('/:id', productController.show);
 router.get('/search', productController.search);
+router.get('/:id', productController.show);
 router.get('/:id/edit', productController.edit);
 
 router.post('/create', upload.single('imagen'), productController.store);
