@@ -23,7 +23,7 @@ let userController = {
 
 			res.render('users/register');
 		
-	},
+		},
 
 
 		store: (req, res) => {
@@ -75,6 +75,14 @@ let userController = {
 			let userCreated = User.create(userToCreate);
 	
 			return res.redirect('/user/login');
+		},
+
+		editUserScreen : (req, res) => {
+			let userId = req.params.id;
+			res.render('users/editUser',
+			{userId : userId}
+			);
+
 		},
 		
 		login: (req, res) => {
@@ -128,7 +136,7 @@ let userController = {
 		}
 	}
 		
-}
+
 
 
 module.exports = userController
