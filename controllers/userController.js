@@ -19,7 +19,7 @@ let userController = {
 
 			res.render('users/register');
 		
-	},
+		},
 
 
 		store: (req, res) => {
@@ -33,6 +33,11 @@ let userController = {
 			// Cuidado sólo mando el cuerpo del FORM, el Id me lo asigna el Modelo  
 			userModel.create(user);
 			res.redirect('/');
+		},
+
+		editUserScreen : (req, res) => {
+			res.render('users/editUser');
+
 		}
 		
 		

@@ -12,5 +12,9 @@ router.post('/login', /*upload.single('imagen'),*/ userController.store);
 
 router.get('/register', userController.showRegister);
 
+router.get('/users/edit/:id', userController.editUserScreen);
+
+
+
 
 module.exports = router;
