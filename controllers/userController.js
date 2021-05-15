@@ -1,8 +1,9 @@
 // ESTO SERIA EL GESTOR DEL MODELO
-//const userDB = require('../model/User');
+const jsonDB = require('../model/User');
 
 // Maneja todos los métodos para PRODUCTO, que lo pasa como parámetro
-//const userModel = userDB('../data/users');
+const userModel = jsonDB('../data/user');
+
 
 // const bcryptjs = require('bcryptjs');
 
@@ -19,6 +20,13 @@ let userController = {
 				res.render('users/login');
 			
 		},
+
+		showRegister: (req, res) => {
+
+			res.render('users/register');
+		
+	},
+
 
 		store: (req, res) => {
 			console.log(req.files);
