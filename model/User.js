@@ -55,5 +55,4 @@ const userModel = function (name) {
 }
 
 
-
 module.exports = userModel;

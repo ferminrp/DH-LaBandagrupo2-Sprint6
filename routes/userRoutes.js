@@ -8,7 +8,7 @@ const uploadFile = require('../middlewares/multerUserMiddleware')
 
 router.get('/login', userController.show);
 
-router.post('/login', /*upload.single('imagen'),*/ userController.store);
+router.post('/register', /*upload.single('imagen'),*/ userController.store);
 
 router.get('/register', userController.showRegister);
 

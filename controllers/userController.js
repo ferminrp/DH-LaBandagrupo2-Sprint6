@@ -33,9 +33,9 @@ let userController = {
 			// Atrapa los contenidos del formulario... Ponele
 			const user = req.body;
 			// Verificar si viene un archivo, para nombrarlo.
-			product.imagen = req.file ? req.file.filename : '';
-			console.log(product.imagen);
-			console.log(product);
+			// user.imagen = req.file ? req.file.filename : '';
+			// console.log(user.imagen);
+			// console.log(user);
 			// Cuidado sólo mando el cuerpo del FORM, el Id me lo asigna el Modelo  
 			userModel.create(user);
 			res.redirect('/');
