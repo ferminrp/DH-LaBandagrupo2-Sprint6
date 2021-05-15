@@ -27,9 +27,9 @@
                     <div class="nombre">
                         <label for="name">Tu nombre</label>
                         <input type="text" name="name" required>
-                        <% if (locals.errors && errors.fullName) { %>
+                        <% if (locals.errors && errors.name) { %>
                             <div class="text-danger">
-                                <%= errors.fullName.msg %> 
+                                <%= errors.name.msg %> 
                             </div>
                         <% } %>
                     </div>
