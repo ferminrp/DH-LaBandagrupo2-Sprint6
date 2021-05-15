@@ -6,8 +6,8 @@ const path = require('path');
 
 // Llamo las distintas rutas que vamos a usar
 const indexRoutes = require('./routes/indexRoutes');        // Ruta para la home
-const userRoutes = require('./routes/userRoutes');          // Ruta para productos
-const productsRoutes = require('./routes/productRoutes');   // Rutas de usuario
+const userRoutes = require('./routes/userRoutes');          // Ruta para usuarios
+const productsRoutes = require('./routes/productRoutes');   // Rutas de producto
 const adminRoutes = require('./routes/adminRoutes');     // Rutas de backoffice
 
 

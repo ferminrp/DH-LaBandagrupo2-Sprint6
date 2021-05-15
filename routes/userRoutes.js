@@ -6,16 +6,11 @@ const userController = require('../controllers/userController');
 const uploadFile = require('../middlewares/multerUserMiddleware')
 
 
+router.get('/login', userController.show);
 
+router.post('/login', /*upload.single('imagen'),*/ userController.store);
 
-
-router.get('/login', (req, res) => {
-    res.render('users/login');
-});
-
-router.get('/register', (req, res) => {
-    res.render('users/register');
-});
+router.get('/register', userController.showRegister);
 
 
 module.exports = router;
