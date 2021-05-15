@@ -1,15 +1,9 @@
 // ESTO SERIA EL GESTOR DEL MODELO
-const jsonDB = require('../model/User');
+const jsonDB = require('../model/userModel');
 
 // Maneja todos los métodos para PRODUCTO, que lo pasa como parámetro
 const userModel = jsonDB('../data/user');
 
-
-// const bcryptjs = require('bcryptjs');
-
-// const {
-// 	validationResult
-// } = require('express-validator');
 
 
 let userController = {

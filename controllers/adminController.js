@@ -1,11 +1,15 @@
 // ESTO SERIA EL GESTOR DEL MODELO
 const productsDB = require('../model/jsonDatabase');
 
-// Maneja todos los métodos para PRODUCTO, que lo pasa como parámetro
-const productModel = productsDB('../data/products01');
-
 // Modelo de usuarios
 const usersDB = require('../model/userModel');
+
+// Maneja todos los métodos para PRODUCTO, que lo pasa como parámetro
+const productModel = productsDB('../data/products01');
+const productData = productsDB('../data/users');
+
+// Modelo de usuarios
+const usersModel = usersDB('../model/userModel');
 
 
 module.exports = {
@@ -15,7 +19,7 @@ module.exports = {
     adminProducts: (req, res) => {
         const products = productModel.all();
         const productsAmount = products.length;
-        const usersAmount = usersDB.findAll().length;
+        const usersAmount = usersModel.findAll().length;
         res.render('backoffice/adminProductos', {
             products: products,
             productsAmount: productsAmount,
@@ -23,7 +27,7 @@ module.exports = {
         });
     },
     adminUsers: (req,res) => {
-        const users = usersDB.findAll();
+        const users = usersModel.findAll();
         const usersAmount = users.length;
         const productsAmount = productModel.all().length;
         res.render('backoffice/adminUsers', {
