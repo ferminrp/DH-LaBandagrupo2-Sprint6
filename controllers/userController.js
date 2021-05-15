@@ -36,7 +36,10 @@ let userController = {
 		},
 
 		editUserScreen : (req, res) => {
-			res.render('users/editUser');
+			let userId = req.params.id;
+			res.render('users/editUser',
+			userId : userId
+			);
 
 		}
 		
