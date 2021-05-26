@@ -10,7 +10,7 @@ const validations = require('../middlewares/validateRegisterMiddleware');
 
 
 //Procesar el registro
-router.post('/register', /*upload.single('imagen'),*/ validations, userController.store);
+router.post('/register', /*upload.single('imagen'),*/ validations, userController.processRegister);
 
 //Mostrar el register
 router.get('/register', /*guest midlleware*/userController.showRegister);

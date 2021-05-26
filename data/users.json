@@ -8027,10 +8027,49 @@
  },
  {
   "id": 1005,
+<<<<<<< HEAD
   "name": "ABACO CONTADORES",
   "email": "santiagoane@abacontadores.com",
   "password": "1234564987",
   "pass_confirm": "6546749/7",
+=======
+  "name": "Fermin",
+  "email": "frodriguezpenelas@gmil.com",
+  "password": "tuvieja",
+  "pass_confirm": "tuvieja",
+  "imagen": ""
+ },
+ {
+  "id": 1006,
+  "name": "Fermin",
+  "email": "frodrigue@hola",
+  "password": "2",
+  "pass_confirm": "2",
+  "imagen": ""
+ },
+ {
+  "id": 1007,
+  "name": "fewgwew",
+  "email": "wwegw@gmai.com",
+  "password": "g",
+  "pass_confirm": "g",
+  "imagen": ""
+ },
+ {
+  "id": 1008,
+  "name": "ferh",
+  "email": "h@h.com",
+  "password": "laconchadelexpressvalidator",
+  "pass_confirm": "laconchadelexpressvalidator",
+  "imagen": ""
+ },
+ {
+  "id": 1009,
+  "name": "feren",
+  "email": "hjg@m.com",
+  "password": "w",
+  "pass_confirm": "w",
+>>>>>>> 35035c489cc9c70a447c7658ddec7ea311faea05
   "imagen": ""
  }
 ]
