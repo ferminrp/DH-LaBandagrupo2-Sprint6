@@ -8024,5 +8024,13 @@
   "email": "santiagoane@abacontadores.com",
   "password": "12345678",
   "pass_confirm": "12345678"
+ },
+ {
+  "id": 1005,
+  "name": "ABACO CONTADORES",
+  "email": "santiagoane@abacontadores.com",
+  "password": "1234564987",
+  "pass_confirm": "6546749/7",
+  "imagen": ""
  }
 ]
