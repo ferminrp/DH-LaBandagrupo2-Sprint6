@@ -8027,12 +8027,6 @@
  },
  {
   "id": 1005,
-<<<<<<< HEAD
-  "name": "ABACO CONTADORES",
-  "email": "santiagoane@abacontadores.com",
-  "password": "1234564987",
-  "pass_confirm": "6546749/7",
-=======
   "name": "Fermin",
   "email": "frodriguezpenelas@gmil.com",
   "password": "tuvieja",
@@ -8069,7 +8063,6 @@
   "email": "hjg@m.com",
   "password": "w",
   "pass_confirm": "w",
->>>>>>> 35035c489cc9c70a447c7658ddec7ea311faea05
   "imagen": ""
  }
 ]
