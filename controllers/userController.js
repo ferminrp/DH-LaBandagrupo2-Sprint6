@@ -1,8 +1,10 @@
+//Definamos el Bcrypt
+const bcryptjs = require('bcryptjs');
 // ESTO SERIA EL GESTOR DEL MODELO
 const jsonDB = require('../model/userModel');
 
 // Maneja todos los métodos para PRODUCTO, que lo pasa como parámetro
-const userModel = jsonDB('../data/user');
+const userModel = jsonDB('../data/users');
 
 //Traigo el validator desde el middleware
 const {
@@ -26,24 +28,25 @@ let userController = {
 		},
 
 
-		store: (req, res) => {
-			console.log(req.files);
-			// Atrapa los contenidos del formulario... Ponele
-			const user = req.body;
-			// Verificar si viene un archivo, para nombrarlo.
-			// user.imagen = req.file ? req.file.filename : '';
-			// console.log(user.imagen);
-			// console.log(user);
-			// Cuidado sólo mando el cuerpo del FORM, el Id me lo asigna el Modelo  
-			userModel.create(user);
-			res.redirect('/');
-		},
+		// store: (req, res) => {
+		// 	console.log(req.files);
+		// 	// Atrapa los contenidos del formulario... Ponele
+		// 	const user = req.body;
+		// 	// Verificar si viene un archivo, para nombrarlo.
+		// 	// user.imagen = req.file ? req.file.filename : '';
+		// 	// console.log(user.imagen);
+		// 	// console.log(user);
+		// 	// Cuidado sólo mando el cuerpo del FORM, el Id me lo asigna el Modelo  
+		// 	userModel.create(user);
+		// 	res.redirect('/');
+		// },
 		
 		register: (req, res) => {
 			return res.render('userRegisterForm');
 		},
 		
 		processRegister: (req, res) => {
+
 			const resultValidation = validationResult(req);
 	
 			if (resultValidation.errors.length > 0) {
@@ -54,7 +57,7 @@ let userController = {
 				});
 			}
 	
-			let userInDB = User.findByField('email', req.body.email);
+			let userInDB = userModel.findByField('email', req.body.email);
 	
 			if (userInDB) {
 				return res.render('users/register', {
@@ -73,9 +76,9 @@ let userController = {
 				avatar: req.file.filename
 			}
 	
-			let userCreated = User.create(userToCreate);
+			let userCreated = userModel.create(userToCreate);
 	
-			return res.redirect('/user/login');
+			return res.redirect('/login');
 		},
 
 		editUserScreen : (req, res) => {

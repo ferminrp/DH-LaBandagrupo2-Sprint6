@@ -1189,5 +1189,15 @@
   "precio": "49283",
   "descuento": "3226",
   "id": "103"
+ },
+ {
+  "nombre_producto": "prueba",
+  "descripcion": " Cultivo de cereales n.c.p., excepto los de uso forrajero  ",
+  "categoria": "Surf",
+  "subcategoria": "Trajes",
+  "precio": "1",
+  "descuento": "333",
+  "imagen": "img-1622294485172.gif",
+  "id": 104
  }
 ]

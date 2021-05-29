@@ -8064,5 +8064,29 @@
   "password": "w",
   "pass_confirm": "w",
   "imagen": ""
+ },
+ {
+  "id": 1010,
+  "name": "giuh",
+  "email": "santiagooane@gmaila.com",
+  "password": "$2a$10$nRlD5miu1Rt0NmWv9qvjK.xvetoAXmHcMLroOlfvSzHEcXRdh/4d6",
+  "pass_confirm": "12345678",
+  "avatar": "img-1622298338616.gif"
+ },
+ {
+  "id": 1011,
+  "name": "Joaco",
+  "email": "anducin@gmail.com",
+  "password": "$2a$10$wO1B6IEmOgnwTlSoIY60IO7kMW7/RxSlGWY9vurrR3WL8qigp8Xr.",
+  "pass_confirm": "1234567890",
+  "avatar": "img-1622298377687.gif"
+ },
+ {
+  "id": 1012,
+  "name": "joaco ",
+  "email": "joacoAlduncin@gmail.com",
+  "password": "$2a$10$O1akp3k/gB0WXMnoNwcsPuxcTKhRhb07Z74kbVHWVu6yD2vIotVg.",
+  "pass_confirm": "123456789",
+  "avatar": "img-1622298858424.gif"
  }
 ]
