@@ -19,7 +19,7 @@ router.get('/register', /*guest midlleware*/userController.showRegister);
 router.get('/login', userController.show);
 
 // Procesar el login
-//router.post('/login', usersController.loginProcess);
+router.post('/login', userController.loginProcess);
 
 // Perfil de Usuario
 //router.get('/profile/', authMiddleware, usersController.profile);

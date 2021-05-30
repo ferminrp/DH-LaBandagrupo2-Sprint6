@@ -27,6 +27,11 @@
                     <div class="mail">
                         <label for="email">Correo electrónico</label>
                         <input type="email" name="email" required>
+                        <% if (locals.errors && errors.email) { %>
+                            <div class="text-danger">
+                                <%= errors.email.msg %>
+                            </div>
+                        <% } %>
                     </div>
 
                     <div class="contraseña">
@@ -36,7 +41,7 @@
 
                     <div class="divcheckbox">
 
-                        <input type="checkbox" name="recordar"> <label class="labellogin" for="recordar">Recordarme
+                        <input type="checkbox" name="remember_user"> <label class="labellogin" for="recordar">Recordarme
                         </label>
 
                     </div>

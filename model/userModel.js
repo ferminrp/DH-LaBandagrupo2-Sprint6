@@ -1,8 +1,8 @@
 const fs = require('fs');
 
-const userModel = function (name) {
+const userModel =
 
-	return {
+	{
 	fileName: './data/users.json',
 
 	getData: function () {
@@ -57,7 +57,7 @@ const userModel = function (name) {
 		return true;
 	}
 }
-}
+
 
 module.exports = userModel;
 

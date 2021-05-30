@@ -1,10 +1,9 @@
 //Definamos el Bcrypt
 const bcryptjs = require('bcryptjs');
 // ESTO SERIA EL GESTOR DEL MODELO
-const jsonDB = require('../model/userModel');
+const userModel = require('../model/userModel');
 
-// Maneja todos los métodos para PRODUCTO, que lo pasa como parámetro
-const userModel = jsonDB('../data/users');
+
 
 //Traigo el validator desde el middleware
 const {
@@ -88,13 +87,13 @@ let userController = {
 			);
 
 		},
-		
-		login: (req, res) => {
+		//ya usamos el show para esta funcion
+		/*login: (req, res) => {
 			return res.render('userLoginForm');
-		},
+		},*/
 		
 		loginProcess: (req, res) => {
-			let userToLogin = User.findByField('email', req.body.email);
+			let userToLogin = userModel.findByField('email', req.body.email);
 			
 			if(userToLogin) {
 				let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
@@ -106,9 +105,9 @@ let userController = {
 						res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
 					}
 	
-					return res.redirect('/user/profile');
+					return res.redirect('/');
 				} 
-				return res.render('userLoginForm', {
+				return res.render('users/login', {
 					errors: {
 						email: {
 							msg: 'Las credenciales son inválidas'
@@ -117,7 +116,7 @@ let userController = {
 				});
 			}
 	
-			return res.render('userLoginForm', {
+			return res.render('users/login', {
 				errors: {
 					email: {
 						msg: 'No se encuentra este email en nuestra base de datos'
