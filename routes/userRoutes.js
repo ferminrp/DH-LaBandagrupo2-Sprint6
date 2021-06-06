@@ -8,12 +8,11 @@ const userController = require('../controllers/userController');
 const uploadFile = require('../middlewares/multerUserMiddleware')
 const validations = require('../middlewares/validateRegisterMiddleware');
 
+//Mostrar el register
+router.get('/register', /*guest midlleware*/userController.showRegister);  
 
 //Procesar el registro
 router.post('/register', uploadFile.single('imagen'), validations, userController.processRegister);
-
-//Mostrar el register
-router.get('/register', /*guest midlleware*/userController.showRegister);
 
 //formulario de login
 router.get('/login', userController.show);
