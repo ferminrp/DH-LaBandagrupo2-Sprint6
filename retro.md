@@ -1,3 +1,20 @@
+# Retro del Sprint 5
+
+### 1. Comenzar a hacer
+-Reuniones fijas una o dos veces por semana -  aunque sean de 15 minutos.
+
+### 2. Hacer más
+- reuniones semanales.
+-invertir mas tiempo al principio que al final del sprint.
+### 3. Continuar haciendo.
+-reuniones para resolver problemas punutales en el codigo.
+-incorporando extensiones colaborativas.
+-mejorando funcionalidades de sprints anteriores.
+### 4. Hacer menos
+
+### 5. Dejar de hacer
+
+
 # Retro del Sprint 4
 
 ### 1. Comenzar a hacer
