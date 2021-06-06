@@ -8091,10 +8091,26 @@
  },
  {
   "id": 1013,
+  "name": "pirulo",
+  "email": "pirulo@pirulo.com",
+  "password": "$2a$10$DiYeTKDKckfnlwqvGG53FeqwlmtAo6xxFoUB4r2MZcSzWi5TluLjm",
+  "pass_confirm": "12345678",
+  "avatar": "img-1622300211984.jpg"
+ },
+ {
+  "id": 1014,
+  "name": "Joaquin Alduncin",
+  "email": "joacoaldun@gmail.com",
+  "password": "$2a$10$oHqxVWvVl6QW41EFcvu2NuCwZA6fCya7ggLlfkbu5IJvTkdlJ0CI.",
+  "pass_confirm": "12345678",
+  "avatar": "img-1622412286429.jpg"
+ },
+ {
+  "id": 1015,
   "name": "hola",
-  "email": "hola@santi.com",
-  "password": "$2a$10$MGJxU0vXlc/3v.lkb65.MO2o3.krftgBTikZlf5YSPTNkGxlVb28i",
-  "pass_confirm": "123456789",
-  "avatar": "img-1622299428823.gif"
+  "email": "hola@hola.com",
+  "password": "$2a$10$wn/.UmX0LiRZTC1x5pXu9O8.SSLdTaTLgQ8PIvuy.a7O/JoT1yf86",
+  "pass_confirm": "12345678",
+  "avatar": "img-1622415250558.jpg"
  }
 ]

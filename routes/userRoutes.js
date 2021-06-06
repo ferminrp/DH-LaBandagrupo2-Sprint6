@@ -18,7 +18,7 @@ router.post('/register', uploadFile.single('imagen'), validations, userControlle
 router.get('/login', userController.show);
 
 // Procesar el login
-//router.post('/login', usersController.loginProcess);
+router.post('/login', userController.loginProcess);
 
 // Perfil de Usuario
 //router.get('/profile/', authMiddleware, usersController.profile);
