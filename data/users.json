@@ -8112,5 +8112,13 @@
   "password": "$2a$10$wn/.UmX0LiRZTC1x5pXu9O8.SSLdTaTLgQ8PIvuy.a7O/JoT1yf86",
   "pass_confirm": "12345678",
   "avatar": "img-1622415250558.jpg"
+ },
+ {
+  "id": 1016,
+  "name": "holahola",
+  "email": "hola1@hola.com",
+  "password": "$2a$10$xp/odK06QIh31Pq6HOtwjuVt6AChg06yglqUY1fLT3U9wCQbkIuXu",
+  "pass_confirm": "12345678",
+  "avatar": "img-1623086487484.jpg"
  }
 ]

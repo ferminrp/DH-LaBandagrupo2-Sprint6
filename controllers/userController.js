@@ -126,7 +126,7 @@ let userController = {
 		},
 		
 		profile: (req, res) => {
-			return res.render('userProfile', {
+			return res.render('users/profile', {
 				user: req.session.userLogged
 			});
 		},
