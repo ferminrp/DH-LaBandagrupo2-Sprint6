@@ -8120,5 +8120,13 @@
   "password": "$2a$10$xp/odK06QIh31Pq6HOtwjuVt6AChg06yglqUY1fLT3U9wCQbkIuXu",
   "pass_confirm": "12345678",
   "avatar": "img-1623086487484.jpg"
+ },
+ {
+  "id": 1017,
+  "name": "prueba",
+  "email": "prueba@prueba.com",
+  "password": "$2a$10$VcUbpTJKarCTgQg6SkCVsenPfuvTvWvR5/35FrFbch6te/pDhMwhm",
+  "pass_confirm": "12345678",
+  "avatar": "img-1623588080879.jpg"
  }
 ]
