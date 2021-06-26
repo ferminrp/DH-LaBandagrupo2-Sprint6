@@ -1,5 +1,5 @@
 // ESTO SERIA EL GESTOR DEL MODELO
-const jsonDB = require('../model/jsonDatabase');
+const DB = require('../database/models');
 
 // Maneja todos los métodos para PRODUCTO, que lo pasa como parámetro
 const productModel = jsonDB('../data/products01');

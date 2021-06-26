@@ -1,44 +1,68 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
-module.exports = (sequelize, DataTypes) => {
-  class Products extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
-    static associate(models) {
-     // belongsTo
-     Products.belongsTo(models.Brand);
-     // belongsTo
-     Products.belongsTo(models.User);  
-     // belongsToMany
-     Products.belongsToMany(models.Color, {
-      as: 'colors',
-      through: 'colorProduct',
-    }); 
-     // belongsToMany
-     Products.belongsToMany(models.Category, {
-      as: 'categories',
-      through: 'CategoryProduct',
+modules.exports = (sequelize, dataTypes) => {
+  let alias = 'Product';
+
+  let cols = {
+    id: {
+      type: dataTypes.INTEGER.UNSIGNED,
+      primaryKey: true,
+      autoIncrement: true,
+    },
+    name: {
+      type: dataTypes.STRING(120),
+      allowNull: false
+    },
+    price: {
+      type: dataTypes.DECIMAL(8, 2),
+      allowNull: false
+    },
+    stock: {
+      type: dataTypes.INTEGER(11),
+      allowNull: false
+    },
+    description: {
+      type: dataTypes.STRING(180),
+      allowNull: false
+    },
+  
+    
+    brandsId: dataTypes.INTEGER.UNSIGNED,
+    categoriesId: dataTypes.INTEGER.UNSIGNED,
+    colorId: dataTypes.INTEGER.UNSIGNED,
+    gendersId: dataTypes.INTEGER.UNSIGNED,
+    imagesId: dataTypes.INTEGER.UNSIGNED,
+  };
+
+  let config = {
+    timestamps: false
+  };
+
+  const products = sequelize.define(alias, cols, config);
+
+  products.associate = function(models) {
+    // belongsTo
+    products.belongsTo(models.Brand, {
+      foreignKey: 'brandsId',
+      as: 'brands'
+    });
+
+    // belongsTo
+    products.belongsTo(models.Color, {
+      foreignKey: 'colorId',
+      as: 'colors'
+    });
+    // belongsTo
+    products.belongsTo(models.Category, {
+      foreignKey: 'categoriesId',
+      as: 'categories'
 
     });
-     
-    }
-  };
-  Products.init({
-    name: DataTypes.STRING,
-    description: DataTypes.TEXT,
-    price: DataTypes.DECIMAL,
-    image: DataTypes.STRING,
-    keywords: DataTypes.TEXT,
-    userId: DataTypes.INTEGER,
-    brandId: DataTypes.INTEGER
-  }, {
-    sequelize,
-    modelName: 'Products',
-  });
-  return Products;
-};
+    // hasMany
+    products.hasMany(models.Order, {
+        foreignKey: 'productId',
+        as: "orders"
+      })
+  }
+
+  return products
+
+}
