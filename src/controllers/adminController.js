@@ -1,15 +1,15 @@
 // ESTO SERIA EL GESTOR DEL MODELO
-const productsDB = require('../model/jsonDatabase');
+// const productsDB = require('../model/jsonDatabase');
 
 
 
 
 // Maneja todos los métodos para PRODUCTO, que lo pasa como parámetro
-const productModel = productsDB('../data/products01');
-const productData = productsDB('../data/users');
+// const productModel = productsDB('../data/products01');
+// const productData = productsDB('../data/users');
 
 // Modelo de usuarios
-const userModel = require('../model/userModel');
+//const userModel = require('../model/userModel');
 
 
 module.exports = {

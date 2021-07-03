@@ -1,13 +1,14 @@
 // ESTO SERIA EL GESTOR DEL MODELO
 const DB = require('../database/models');
+const sequelize = db.sequelize;
+const { Op } = require("sequelize")
 
 // Maneja todos los métodos para PRODUCTO, que lo pasa como parámetro
-const productModel = jsonDB('../data/products01');
+// const productModel = jsonDB('../data/products01');
 
 let productController = {
 
     home: (req, res) => {
-        console.log('entro al home del produt controller y redirijo')
 
         res.redirect('/')
 

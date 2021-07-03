@@ -1,7 +1,7 @@
 //Definamos el Bcrypt
 const bcryptjs = require('bcryptjs');
 // ESTO SERIA EL GESTOR DEL MODELO
-const userModel = require('../model/userModel');
+const DB = require('../database/models')
 
 
 
