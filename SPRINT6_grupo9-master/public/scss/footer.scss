@@ -1,0 +1,124 @@
+/*-----------INICIO DEL FOOTER DE LA PÁGINA HOME---------------*/
+
+footer {
+    width: 100%;
+    background-color: #212121;
+    color: white;
+    padding-bottom: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 14px;
+}
+
+footer i {
+    font-size: 2rem;
+}
+
+.section1 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-self: auto;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contacto {
+    display: block;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+.contacto h2 {
+    margin-bottom: 5%;
+    text-align: left;
+}
+
+.contacto .mail {
+    margin-bottom: 5%;
+    text-align: left;
+}
+
+.iconosSociales {
+    display: flex;
+    flex-direction: row;
+    align-self: flex-end;
+
+}
+
+.iconosSociales a{
+    color: white;
+}
+.contacto i {
+    margin: 0px 8px 0px 0px;
+    transition: all 450ms;    
+}
+
+
+.contacto i:hover {
+    color: #717171;    
+    transform: scale(1.1);
+}
+
+.mediosDePago {
+    display: block;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+.mediosDePago h2 {
+    margin-bottom: 5%;
+    text-align: left;
+}
+
+.iconosPago {
+    margin-top: 5px;
+}
+
+.mediosDePago i {
+    margin: 0px 8px 0px 0px;
+    transition: color 420ms;
+}
+
+.mediosDePago i:hover {
+    color: #717171;
+}
+
+.ahora12 {
+    padding: 5px;
+}
+
+.ahora12 p {
+    text-align: left;
+}
+
+.section2 {
+    display: block;
+}
+
+.section2 p {
+    text-align: center;
+}
+@media(min-width: 768px) {
+/*--------FOOTER DE LA PÁGINA HOME-----------*/
+.section1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+}
+
+@media(min-width: 1200px) {
+    footer {
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    footer section h2 {
+        margin-bottom: 1.5%;
+    }
+
+    footer section p {
+        text-align: justify;
+    }
+}

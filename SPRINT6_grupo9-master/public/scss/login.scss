@@ -1,0 +1,109 @@
+/*INICIO DEL <MAIN> DE LA PÁGINA DE LOGIN*/
+.mainDelLogin {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    /* margin-top: 100px; */
+    flex-flow: column;
+}
+
+.mainDelLogin h1 {
+    color: #383D3D;
+    font-size: 32px;
+    margin-top: 170px;
+
+}
+
+.mainDelLogin label {
+    color: #383D3D;
+    font-size: 18px;
+    text-align: left
+}
+
+.datosDelLogin label {
+    color: #383D3D;
+    font-size: 18px;
+    text-align: left
+}
+
+.datosDelLogin a {
+    font-size: 18px;
+    color: #383D3D;
+}
+
+.datos-del-login-mas-especificos,
+.datos-del-register-especificos {
+    border: none;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    width: 100%;
+    height: 40px;
+    outline: none;
+}
+
+.cajon-principal-del-login {
+    margin: 20px 10px;
+}
+
+.dato-email-login {
+    margin: 25px 0px;
+    padding: 5px;
+    width: 100%;
+    font-size: 25px;
+    text-align: left;
+}
+
+.dato-contraseña-login {
+    margin: 25px 0px;
+    padding: 5px;
+    width: 100%;
+    font-size: 25px;
+    text-align: left;
+}
+
+.datosDelLogin {
+    margin: 25px 0px;
+    padding: 5px;
+    width: 100%;
+    font-size: 25px;
+}
+
+
+
+
+.boton-del-login {
+
+    font-size: 30px;
+
+}
+
+.boton-login-interno {
+    border-radius: 5px;
+    border: none;
+    font-size: 20px;
+    padding: 10px;
+    background-color: #12784A;
+    color: white;
+    width: 100%;
+    transition: all 420ms;
+}
+
+.boton-login-interno:hover {
+    background-color: #14583a;
+
+}
+
+.enlace-del-login {
+    padding: 15px;
+    margin: 20px 0px;
+    color: #383D3D;
+    font-size: 18px;
+    width: 100%;
+}
+
+.seccion-del-login {
+    width: 50%;
+    max-width: 600px;
+}
+
+

@@ -1,0 +1,63 @@
+.bannerFinal {
+    display: flex;
+    flex-direction: column;
+    color: #383D3D;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.bannerFinal i {
+    font-size: 2em;
+    margin-bottom: 8px;
+}
+
+.bannerFinal h2 {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.bannerFinal p {
+    font-size: 14px;
+}
+
+.bannerFinalPartes {
+
+    margin-top: 15px;
+    text-align: center;
+    line-height: initial;
+}
+@media(min-width: 768px) {
+    // *-----------SECCIÓN EN COMÚN--------------*/
+    .bannerFinal {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        padding: 30px;
+        justify-content: space-around;
+        margin-top: auto;
+
+    }
+
+    .titulo-p {
+        padding: 10px;
+        text-align: left;
+        margin-left: 40px;
+    }
+
+    .bannerFinalPartes i {
+        float: left;
+        margin: 0px;
+        margin-top: 5%;
+    }
+
+    .bannerFinalPartes {
+        padding-left: 25px;
+    }
+
+
+    #bannerFinal1,
+    #bannerFinal2 {
+        border-left: 2px lightgray solid;
+    }
+}
+

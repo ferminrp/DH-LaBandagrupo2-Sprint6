@@ -1,0 +1,85 @@
+.FAQ {
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+.FAQ h2 {
+    margin-bottom: 5%;
+}
+
+.FAQ ul {
+    list-style: none;
+}
+
+.FAQ ul li {
+    margin-bottom: 5%;
+    text-align: left;
+}
+
+.FAQ ul a {
+    text-decoration: none;
+    color: white;
+    transition: all 200ms;
+}
+
+.FAQ ul a:hover {
+    color: #717171;
+    text-decoration: underline;
+
+}
+
+
+.FAQ-main {
+    padding: 15px 25px;
+    font-size: 14px;
+    color: #383D3D;
+    /* margin-top: 70px; */
+}
+
+.FAQ-main h2 {
+    font-weight: 700;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.FAQ-main p {
+    text-align: justify;
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+
+.FAQ-main h1 {
+
+    margin-top: 115px;
+}
+@media(min-width: 768px) {
+ /*-----------INICIO DEL <MAIN> DE LA PÁGINA FAQ---------------*/
+
+
+ .FAQ-main {
+    max-width: 70%;
+    /* margin-top: 90px; */
+}
+
+.FAQ-main h1 {
+    font-size: 35px;
+    margin-top: 109px;
+}
+
+.FAQ-main h2 {
+    font-size: 18px;
+}
+
+.FAQ-main p {
+    font-size: 16px;
+    text-align: left;
+}
+
+}
+@media(min-width: 1200px) {
+
+.FAQ-main h1 {
+    margin-top: 115px;
+}}
+

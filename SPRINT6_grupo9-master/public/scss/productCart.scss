@@ -1,0 +1,264 @@
+
+/*INICIO DEL <MAIN> DE LA PÁGINA CARRITO DE COMPRAS*/
+
+.carrito-main {
+    padding: 10px;
+    /* border: blueviolet 4px solid;*/
+    /* margin-top: 70px; */
+}
+
+.mini-banner {
+    /*border: 5px solid red;*/
+    background-color: #12784A;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    color: white;
+    text-align: center;
+    margin-top: 148px;
+}
+
+.seguir-comprando a {
+    text-decoration: none;
+    transition: all 420ms;
+
+}
+
+.seguir-comprando a:hover {
+    text-decoration: underline;
+    color: #12784A;
+}
+
+p.seguirC {
+    color: #383D3D;
+    font-size: 18px;
+    text-align: right;
+    margin-bottom: 5px;
+    margin-bottom: 15px;
+    transition: all 420ms;
+}
+
+.seguirC i {
+    margin-left: 2px;
+
+}
+
+.seguirC:hover {
+    color: #12784A;
+}
+
+
+table {
+    background-color: white;
+    color: gray;
+    width: 100%;
+    height: 200px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+
+}
+
+table img {
+    width: 100px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.imagen {
+    text-align: center;
+}
+
+td {
+    text-align: center;
+    font-size: 14px;
+    border-bottom: lightgray solid 1px;
+
+}
+
+th {
+    font-size: 14px;
+}
+
+input#unidades {
+    border-radius: 5px;
+    border: solid 2px #d3d3d3;
+    cursor: pointer;
+    outline: none;
+
+}
+
+
+
+
+.otros-datos {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    color: #383D3D;
+    background-color: #d3d3d3;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.cupon {
+    margin-bottom: 15px;
+
+}
+
+.boton-aplicar-cupon button,
+.realizar-compra {
+    border: none;
+    width: 100%;
+    height: 33px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 3%;
+    margin-top: 3%;
+    color: white;
+    background-color: #12784A;
+    cursor: pointer;
+    transition: all 420ms;
+
+
+}
+
+.boton-aplicar-cupon button:hover,
+.realizar-compra:hover {
+    background-color: #14583a;
+}
+
+
+
+
+h4#selecEn {
+    margin-bottom: 5px;
+}
+
+.seleccionar-envío form {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.seleccionar-envío form input {
+    margin-right: 3px;
+    margin-bottom: 12px;
+    outline: none;
+
+}
+
+.codigoPostal {
+    color: #383D3D;
+    font-weight: 600;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+input#codigopostal,
+input#cupon {
+    width: 70%;
+    border: none;
+    border-radius: 3px;
+    background-color: white;
+    margin-right: 2px;
+    height: 25px;
+    margin-top: 5px;
+    padding: 5px;
+    outline: none;
+
+}
+
+.total input {
+    width: 50%;
+    border: none;
+    border-radius: 3px;
+    background-color: white;
+    height: 20px;
+    outline: none;
+
+}
+
+@media(min-width: 768px) {
+
+    
+    table {
+        color: gray;
+        width: 100%;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        padding: 20px;
+
+    }
+
+    table img {
+        width: 100px;
+        margin-bottom: 25px;
+        margin-top: 25px;
+    }
+
+    .imagen {
+        text-align: center;
+    }
+
+    td {
+        text-align: center;
+        font-size: 19px;
+        border-bottom: lightgray solid 1px;
+
+    }
+
+
+
+    th {
+        font-size: 22px;
+    }
+
+    .otros-datos {
+        max-width: 80%;
+        margin-left: 10%;
+        padding: 30px 0px 30px 0px;
+    }
+
+    .boton-aplicar-cupon button,
+    .realizar-compra {
+        max-width: 50%
+    }
+
+    .boton-aplicar-cupon button {
+        margin-top: 1%;
+
+    }
+
+    input#codigopostal,
+    input#cupon {
+        max-width: 50%;
+    }
+
+    .codigoPostal {
+        margin-top: 25px;
+    }
+
+    .total input {
+        max-width: 45.6%;
+    outline: none;
+
+    }
+
+    .otros-datos h4,
+    .cupon,
+    .seleccionar-envío,
+    .finalizar-compra {
+        text-align: center;
+    }
+
+    .otros-datos h4,
+    .codigoPostal {
+        font-size: 20px;
+    }
+
+    .otros-datos h4 {
+        margin-bottom: 10px;
+    }
+
+}

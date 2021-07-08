@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head') %>
+</head>
+<body>
+    <%- include('partials/header') %>
+
+<main>
+
+
+
+    <main class="carga-productos">
+                    <section class="categorias">
+                    <form action="/admin/stock/edit/<%=  products.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                        <article class="Datos-producto">
+                            <div class="nombre">
+                                <label>Nombre del producto</label>
+                                <input type="text" name="name" value="<%= products.name %>" >
+                                <% if(locals.errors && errors.name){ %>
+                                    <div class="errorMsg"><%= errors.name.msg %></div>
+                                <% } %>
+                            </div>
+                             <div class="color">
+                                <label>Descripción</label>
+                                <input type="text" name="description" value="<%= products.description %>">
+                                <% if(locals.errors && errors.description){ %>
+                                    <div class="errorMsg"><%= errors.description.msg %></div>
+                                <% } %>
+                            </div>
+                            <div class="precio">
+                                <label>Precio</label>
+                                <input type="number" name="price" value="<%= products.price %>">
+                                <% if(locals.errors && errors.price){ %>
+                                    <div class="errorMsg"><%= errors.price.msg %></div>
+                                <% } %>
+                            </div>
+                        </article>
+                        <article class="categoria-producto">
+                            <div class="elegir-categoria">
+                                <label>Categorí­a</label>
+                                <!-- <input type="text" name="categorie" value="<%= products.categorie %>"> -->
+                                <select name="categorie" id="categoria"> <!--esto no tiene el valor anterior porque en ningún lado se lo estamos dando-->
+                                    <% if(productGenders){ %>
+                                        <% productGenders.forEach(gender => { %>
+                                            
+                                            <option value="<%= gender.id %>"> <%= gender.name %>
+                                                </option>
+
+
+                                      <% }) %>
+                                   <% } %>
+                                </select>
+                                <% if(locals.errors && errors.categorie){ %>
+                                    <div class="errorMsg"><%= errors.categorie.msg %></div>
+                                <% } %>
+                            </div>
+                            <div class="tipo">
+                                <label>Tipo</label>
+                                    <select id="type" name="type">
+                                        <% if(productTypes){ %>
+                                            <% productTypes.forEach(type => { %>
+                                                <option value="<%= type.id %>"><%= type.name %></option>
+                                          <% }) %>
+                                       <% } %>
+                                </select>                                
+                            </div>
+                            <div class="color">
+                                <label for="colorId">Color</label>
+                                <select id="colorId" name="color">
+                                    <% if(productColors){ %>
+                                        <% productColors.forEach(color => { %>
+                                            <option value="<%= color.id %>"><%= color.name %></option>
+                                      <% }) %>
+                                   <% } %>
+                                </select>
+                            </div>
+                       </article>
+                    </section>
+                    <section class="descripcion-producto">
+                        <!-- <article class="text-area-producto">
+                            <label>Descripción del producto</label>
+                            <textarea  name="description" value=""></textarea>
+                            
+                        </article> -->
+                        <section>
+                            <article class="carga-fotos">
+                                <label>Subir imágenes</label>
+                                <img src="./images/productImages/<%= products.images %>" width="250px">
+                               <input type="file" name="image" value="<%= products.images %>" accept="image/*">
+                               <input type="hidden" name="oldImage" value="<%= products.images %>">
+
+                            </article>
+                       </section>
+                       <article class="unidades-stock">
+                        <label for="stock">Unidades en stock</label>
+                        <input id="stock" type="number" name="stock" value="<%= locals.oldData ? oldData.stock : null %>">
+                        <% if(locals.errors && errors.stock){ %>
+                            <div class="errorMsg"><%= errors.stock.msg %></div>
+                        <% } %>
+                    </article>
+                        <article class="boton-carga-producto">
+                            <label for="producto-nuevo" method=""></label>
+
+                            
+
+                        <button class="boton-editar-producto" type="submit">Guardar cambios</button>
+                        </article>
+                        <article class="boton-carga-producto">
+                            <label for="volverAtrás" method=""></label>
+                            <a href='/admin/stock' class="botonVistaAdministrador">Volver a stock de productos</a>
+                        </article>
+                        <article class="boton-carga-producto">
+                            <label for="volverAtrás" method=""></label>
+                            <a href='/admin' class="botonVistaAdministrador">Volver a la vista de administrador</a>
+                        </article>
+                        <br>
+                        <br>
+                        <h2 class="productEliminar">¿Desea eliminar este producto de la base de datos?</h2>
+                       
+                    </section>
+                </form>
+
+                
+
+            <!-- <form action="/admin/stock/<porcent= products.id%>?_method=DELETE" method="POST" enctype="multipart/form-data"> -->
+                            <article class="botonEliminarP">
+                                <a class="deleteButton" href="/admin/stock/edit/delete/<%= products.id %>">Eliminar producto</a>
+                    </article>
+            </form>
+         
+
+
+
+
+
+
+
+
+
+
+
+    <%- include('partials/bannerFinal') %>
+</main>
+
+
+
+
+
+
+
+
+
+ <%- include('partials/footer') %>
+
+
+
+ <script src="/js/mobileMenu.js"></script>
+</body>
+</html>

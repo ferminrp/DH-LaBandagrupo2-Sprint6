@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('partials/head') %>
+
+<body>
+
+    <%- include('partials/header') %>
+
+    <main class="delete-main">
+
+        <div class="deleteStyle">
+        <h2 >¿Estás seguro de querer eliminar el producto?</h2>
+        
+        <!-- <img src="/images/designImages/duda.jpeg"> -->
+        <!-- enctype="multipart/form-data" me parece que esto no iría-->
+        <form action="/admin/stock/edit/delete/<%= products.id %>?_method=DELETE" method="POST" >
+            <button type="submit">Eliminar producto</button>
+            
+        </form>
+        <a href="/admin/stock/">Volver</a>
+    </div>
+    <%- include('partials/bannerFinal') %>
+
+</main>
+
+
+
+<%- include('partials/footer') %>
+<script src="/js/mobileMenu.js"></script>
+</body>
+</html>

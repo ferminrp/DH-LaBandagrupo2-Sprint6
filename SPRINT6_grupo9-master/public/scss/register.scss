@@ -1,0 +1,111 @@
+/*INICIO DEL <MAIN> DE LA PÁGINA REGISTER*/
+.main-del-register {
+    /* margin-top: 100px; */
+    align-items: center;
+    flex-flow: column;
+    display: flex;
+    text-align: center;
+
+
+}
+
+.main-del-register h1 {
+    color: #383D3D;
+    margin-top: 170px;
+}
+
+.main-del-register label {
+    color: #383D3D;
+    font-size: 18px;
+}
+
+
+.datos-del-register a {
+    color: #383D3D;
+    font-size: 18px;
+}
+
+
+.boton-register-interno {
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    background-color: #12784A;
+    color: white;
+    transition: all 420ms;
+    width: 100%;
+}
+
+.boton-register-interno:hover {
+    background-color: #14583a;
+
+}
+
+.enlace-del-register {
+    padding: 15px;
+    margin: 20px 0px;
+    color: #383D3D;
+    font-size: 18px;
+    width: 100%;
+}
+
+.dato-nombre {
+    padding: 15px;
+    margin: 20px 0px;
+    font-size: 25px;
+    width: 100%;
+    text-align: left;
+}
+
+.dato-apellido {
+    padding: 15px;
+    margin: 20px 0px;
+    font-size: 25px;
+    width: 100%;
+    text-align: left;
+}
+
+.dato-email {
+    padding: 15px;
+    margin: 20px 0px;
+    font-size: 25px;
+    width: 100%;
+    text-align: left;
+}
+
+.dato-su-numero {
+    padding: 15px;
+    margin: 20px 0px;
+    font-size: 25px;
+    width: 100%;
+    text-align: left;
+}
+
+.dato-su-contraseña {
+    padding: 15px;
+    margin: 20px 0px;
+    font-size: 25px;
+    width: 100%;
+    text-align: left;
+}
+
+.dato-confirmacion-de-contraseña {
+    padding: 15px;
+    margin: 20px 0px;
+    font-size: 25px;
+    width: 100%;
+    text-align: left;
+}
+
+.secsion-del-register {
+    width: 50%;
+    max-width: 600px;
+}
+
+@media(min-width: 768px) {
+    /* INICIO DEL REGISTER*/
+    .titulo-el-register {
+        font-size: 35px;
+    }
+}

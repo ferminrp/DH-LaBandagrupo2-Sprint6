@@ -1,0 +1,504 @@
+.bloque-carrusel{
+    padding-top: 120px;
+}
+.contenedor{
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider-contenedor{
+    width: 100%;
+    display: flex;
+}
+
+.contenido-slider{
+    width: 100%;    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.contenido-slider:nth-child(2){
+    
+    color: #fff;
+}
+
+.contenido-slider:nth-child(3){
+    background-image: url('/images/designImages/web2.jpeg');
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+
+.contenido-slider > img{
+    width: 100vw;
+}
+
+.contenido-slider > div{
+    width: 40%;
+}
+
+.contenido-slider h2{
+    font-weight: 300;
+    text-align: justify;
+    line-height: 30px;
+} 
+
+ .contenido-slider a{
+    color: #fff;
+    background: #332863;
+    width: 100px;
+    display: block;
+    padding: 15px 0;
+    text-align: center;
+    border-radius: 3px;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+.contenido-slider:nth-child(2) a{
+    background: #fff;
+    color: #332863;
+    
+}
+
+.bloque-genderLineas {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 110px;
+    margin-top: 5%;
+    color: white;
+    font-weight: 600;
+
+}
+
+.masculine,
+.fem,
+.n-gender {
+    border: none;
+    width: 100%;
+    height: 33px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 3%;
+    color: white;
+    background-color: #12784A;
+    cursor: pointer;
+}
+
+
+
+.bloque-filtros-productos {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    width: 100%;
+
+}
+
+.barritaPrecio {
+    width: 100%;
+}
+
+.barritaPrecio p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #383D3D;
+}
+
+.barraPInput {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+    background: #383D3D;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+
+}
+
+.barraPInput:hover {
+    opacity: 1;
+}
+
+.barraPInput::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #12784A;
+    cursor: pointer;
+}
+
+.barraPInput::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+
+.filtrosR {
+    background-color: lightgray;
+    border-radius: 5px;
+    width: 100%;
+
+}
+
+.filtroRelojes {
+    padding: 10px;
+}
+
+.filtrosR h4 {
+    color: #383D3D;
+    font-size: 18px;
+    margin: 10px 0px 5px 0px;
+}
+
+.lineas, .marcaR,
+.colorR,
+.tipoR {
+    color: #383D3D;
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.filtrosR input[type=checkbox] {
+    vertical-align: middle;
+
+    bottom: 1px;
+
+}
+
+.botFiltros button {
+    border: none;
+    width: 100%;
+    height: 33px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15%;
+    color: white;
+    background-color: #12784A;
+
+}
+
+
+
+
+.productosR {
+    background-color: white;
+    width: 100%;
+    margin-top: 5%;
+    /*border: lightgray solid 2px;*/
+}
+
+.articulosR {
+    margin: 10px ;
+    margin-right: 10px;
+    /*border: lightgreen 2px solid;*/
+
+}
+
+.articulosR img {
+    width: 100%;
+}
+
+
+.detallesProductosR {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    /*border: lightpink 5px solid;*/
+    line-height: 20px;
+
+
+}
+
+.detallesProductosR h3 {
+    font-size: 18px;
+    font-weight: 700;
+   
+    margin-bottom: 8px;
+    /*border: limegreen 2px solid;*/
+}
+
+.detallesProductosR .precioR {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    width: 100%;
+    text-align: right;
+    /*border: #7DB9B3 2px solid;
+ */
+}
+
+.detallesProductosR .financiacionR {
+    font-size: 12px;
+    text-align: right;
+    /*border: #A17C46 2px solid;
+ */
+    width: 100%;
+}
+
+.verP {
+    text-decoration: none;
+    color: #383D3D;
+    text-align: right;
+    width: 100%;
+    margin-top: 5px;
+    font-size: 20px;
+
+}
+
+.verP i {
+    margin-right: 10px;
+}
+
+.verP .detalleOjo {
+    display: none;
+}
+
+.botonMostrarTodo {
+    text-align: center;
+}
+
+.botonMostrarTodo button {
+    border: none;
+    width: 100%;
+    height: 33px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 3%;
+    margin-top: 9%;
+    color: white;
+    background-color: #12784A;
+    cursor: pointer;
+    transition: all 420ms;
+    max-width: 305px;
+}
+
+.botonMostrarTodo button:hover {
+    background-color: #14583a;
+}
+
+
+@media(min-width: 361px) {
+
+
+
+    /*NORMALIZACIÓN DE LOS ÍCONOS*/
+    .fa-shopping-cart:before,
+    .fa-user-circle:before,
+    .fa-search:before {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+@media screen and (max-width:600px){
+    .contenido-slider{
+       flex-direction: column-reverse;
+    }
+
+    .contenido-slider > div{
+        width: 80%;
+    }
+
+}
+
+
+@media(min-width: 768px) {
+    .bloque-filtros-productos {
+        display: flex;
+        flex-direction: row;
+        margin-top: 123px;
+
+    }
+
+    .filtrosR {
+        width: 20%;
+        height: auto;
+        border-right: lightgray 2px solid;
+        max-height: 640px;
+    }
+
+    .marcaR, .lineas,
+    .colorR,
+    .tipoR {
+        display: block;
+        margin-top: 12px;
+        margin-right: auto;
+    }
+
+    .productosR {
+        width: 100%;
+        height: auto;
+        margin: unset;
+        /*border: 2px red solid;*/
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .bloque-genderLineas {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: unset;
+    }
+
+    .masculine,
+    .fem,
+    .n-gender {
+        width: 33%;
+        margin-left: 2%;
+        margin-right: 2%;
+        cursor: pointer;
+        transition: all 420ms;
+    }
+
+    .masculine:hover,
+    .fem:hover,
+    .n-gender:hover {
+
+        background-color: #14583a;
+
+    }
+
+
+    .articulosR {
+        /*border: lightgreen 2px solid;*/
+        width: 50%;
+        display: flex;
+        margin-top: auto;
+        padding: 15px;
+        transition: all 420ms;
+    }
+
+    .articulosR:hover {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+
+    }
+
+    .articulosR img {
+        width: 50%;
+
+    }
+
+    .detallesProductosR {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 50%;
+        /* border: lightpink 5px solid;*/
+
+
+    }
+
+    .detallesProductosR h3 {
+        font-size: 22px;
+        font-weight: 700;
+        width: 100%;
+        /*border: limegreen 2px solid;*/
+    }
+
+    .detallesProductosR .precioR {
+        font-size: 18px;
+        width: 100%;
+        /*border: #7DB9B3 2px solid; */
+    }
+
+    .detallesProductosR .financiacionR {
+        font-size: 14px;
+        width: 100%;
+    }
+
+    /*border: #A17C46 2px solid;*/
+
+    .verP i {
+        margin-right: 30px;
+        margin-bottom: 2px;
+
+    }
+
+    .verP {
+        display: flex;
+        font-size: 16px;
+    }
+
+    /* .verP:hover {
+        color: #12784A;
+    } */
+
+    .verP p {
+        display: block !important;
+        
+        
+    }
+}
+@media screen and (max-width:900px){
+   
+
+    .contenido-slider > div{
+        width: 40%;
+    }
+
+    .contenido-slider h2{
+        font-size: 23px;
+    }
+}
+
+@media(min-width: 1200px) {
+    
+    .articulosR {
+        /*border: lightgreen 2px solid;*/
+        width: 30%;
+        display: flex;
+        padding: 20px;
+
+    }
+
+    .articulosR img {
+        width: 60%;
+    }
+
+    .detallesProductosR {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 40%;
+        /*border: lightpink 5px solid;  */
+
+    }
+
+    .detallesProductosR h3 {
+        font-size: 24px;
+        font-weight: 700;
+        width: 100%;
+        line-height: normal;
+        /* border: limegreen 2px solid;*/
+    }
+
+    .detallesProductosR .precioR {
+        font-size: 20px;
+        width: 100%;
+        /* border: #7DB9B3 2px solid; */
+    }
+
+    .detallesProductosR .financiacionR {
+        font-size: 16px;
+        width: 100%;
+        /*border: #A17C46 2px solid;*/
+    }
+}
